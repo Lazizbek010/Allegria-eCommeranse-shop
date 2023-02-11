@@ -1,0 +1,239 @@
+.brands{
+    padding-top: 61.2px;
+    &__hero{
+        background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),
+        url('../images/bg-brands-hero.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &__info{
+            text-align: center;
+            padding-bottom: 239px;
+            padding-top: 237px;
+            h1{
+                margin-bottom: 15px;
+                span{
+                    font-family: 'Cormorant';
+                    text-transform: uppercase;
+                    color: var(--light-color1);    
+                    @include font(20,24,500);
+                    display: block;
+
+                }
+            }
+            p{
+                max-width: 627px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.american-vintage{
+    padding: 120px 0;
+    &__info{
+        max-width: 1114px;
+        margin: 0 auto;
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+        &__left{
+            width: 400px;
+            height: 350px;
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+        &__right{
+            width: 629px;
+            h1{
+                margin: 30px 0;
+            }
+            p{
+                color: var(--primary-dark);
+                opacity: 0.7;
+                margin-bottom: 73px;
+            }
+            img{
+                display: block;
+                width: 250px;
+                height: 220px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+.deha{
+    &__hero{
+        background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),
+        url('../images/bg-deha-hero.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-bottom: 120px;
+        &__text{
+            max-width: 627px;
+            margin: 0 auto;
+            padding: 237px 0;
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 15px;
+        }
+    }
+    &__about{
+        max-width: 1114px;
+        margin: 0 auto;
+        margin-bottom: 176px;
+        display: flex;
+        gap: 70px;
+        &__left{
+            max-width: 627px;
+            text-align: center;
+            p{
+                color: var(--primary-dark);
+                opacity: 0.7;
+                margin: 29px 0 39px;
+            }
+            &__img{
+                width: 250px;
+                height: 220px;
+                position: relative;
+                img{
+                    width: inherit;
+                    height: inherit;
+                }
+                &__shape{
+                    position: absolute;
+                    left: -102px;
+                    bottom: -138px;
+
+                }
+            }
+        }
+        &__right{
+            width: 400px;
+            height: 350px;
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+}
+
+.lucy{
+    &__info{
+        max-width: 627px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        text-align: center;
+        h1{
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            span{
+                color: var(--primary-dark);
+            }
+        }
+        p{
+            color: var(--primary-dark);
+        }
+    }
+    &__img{
+        height: 600px;
+        background: url('../images/bg-lucy-img.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__about{
+        padding: 120px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 87px;
+        &__img{
+            width: 261px;
+            height: 350px;
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+        &__text{
+            max-width: 627px;
+            h1{
+                margin-bottom: 30px;
+            }
+            p{
+                color: var(--primary-dark);
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.birkenstock{
+    &__img{
+        background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),
+        url('../images/bg-birkenstock-img.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 237px 0;
+        &__info{
+            text-align: center;
+            max-width: 627px;
+            margin: 0 auto;
+            h1{
+                margin-bottom: 18px;
+            }
+        }
+    }
+    &__about{
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        padding-top: 120px;
+        padding-bottom: 100px;
+        &__left{
+            max-width: 627px;
+            text-align: center;
+            h1{
+                margin-bottom: 29px;
+                margin-top: 32px;
+            }
+            p{
+                color: var(--primary-dark);
+                opacity: 0.7; 
+                margin-bottom: 44px;  
+            }
+            &__img{
+                width: 250px;
+                height: 220px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                img{
+                    width: inherit;
+                    height: inherit;
+                }
+                &-shape{
+                    position: absolute;
+                    left: -95px;
+                    bottom: -140px;
+                }
+            }
+        }
+        &__right{
+            width: 400px;
+            height: 350px;
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+}

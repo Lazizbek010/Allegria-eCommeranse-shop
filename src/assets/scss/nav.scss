@@ -1,0 +1,79 @@
+.nav{
+    padding: 20px 0 18px;
+    background: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            width: 129px;
+            height: 16px;
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+        .nav-right{
+            display: flex;
+            align-items: center;
+            gap: 57px;
+            &__menu{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                ul{
+                    display: flex;
+                    gap: 45px;
+                    a{
+                        color: var(--silver-color);
+                        &.active{
+                            color: var(--primary-dark);
+                        }
+                    }
+                }
+                .search{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    input{
+                        width: 150px;
+                        padding: 2px;
+                        font-size: 16px;
+                        border-bottom: 1px solid var(--primary-dark);
+                    }
+                }
+            }
+            .langs{
+                display: flex;
+                li{
+                    padding: 0 10px;
+                    position: relative;
+                    &.active{
+                        color: var(--tomato-color);
+                    }
+                    &.active::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        background: var(--tomato-color);
+                        width: 25px;
+                        height: 2px;
+                        bottom: -18px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            .nav-icons{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}

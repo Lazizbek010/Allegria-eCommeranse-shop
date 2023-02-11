@@ -1,0 +1,81 @@
+:root{
+    --primary-color: #254A5A;
+    --primary-dark: #0F303F;
+    --tomato-color: #E64926;
+    --light-color1: #EAE9E8;
+    --light-color2: #CEC6C4;
+    --silver-color: #B7C1C5;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --line-color: #CECECE;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+    border: none;
+    // outline: 1px solid red;
+    color: var(--primary-dark);
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.nav-text-font{
+    font-family: 'Avenir', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;  
+    @include font(16,22,400);
+}
+.description-text{
+    font-family: 'Avenir', sans-serif;
+    color: var(--white-color);
+    @include font(14,19,400);
+}
+.cormorant-500{
+    font-family: 'Cormorant', serif;
+    @include font(40,48,500);
+    text-transform: uppercase;
+    color: var(--light-color1);
+    span{
+        display: block;
+        @include font(20,24,500);
+        color: var(--light-color1);
+    }
+}
+.avenir-800{
+    font-family: 'Avenir', sans-serif;
+    @include font(25,34,800);
+    text-transform: uppercase;   
+}
+
+// font-family: 'Tajawal', sans-serif; 1
+// @include font(14,17,500);
+// letter-spacing: 0.1em;
+// text-transform: uppercase;
+// color: var(--light-color1);
+
+// font-family: 'Cormorant Garamond';
+// text-transform: uppercase;
+// color: var(--white-color);
+// @include font(90,92,500);
+// margin-bottom: 15px;
+
+// font-family: 'Avenir', sans-serif;  
+// margin-bottom: 34px;
+// color: var(--white-color);
+// @include font(14,19,400);
+
+//  font-family: 'Cormorant';
+// font-weight: 500;
+// font-size: 20px;
+// line-height: 24px;
+// text-transform: uppercase;
+// color: var(--light-color1);    
