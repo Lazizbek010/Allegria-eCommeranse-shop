@@ -20,7 +20,7 @@ html{
     list-style: none;
     font-style: normal;
     border: none;
-    // outline: 1px solid red;
+    outline: 1px solid red;
     color: var(--primary-dark);
 }
 .container{
@@ -28,11 +28,22 @@ html{
     margin: 0 auto;
     padding: 0 50px;
 }
+.btn{
+    min-width: 213px;
+    padding: 15px 0;
+    text-align: center;
+    background: var(--primary-dark);
+    color: var(--light-color1); 
+    font-family: 'Avenir', sans-serif;
+    text-transform: uppercase;
+    @include font(15,22,500);  
+}
 .nav-text-font{
     font-family: 'Avenir', sans-serif;
     letter-spacing: 0.1em;
     text-transform: uppercase;  
     @include font(16,22,400);
+    display: block;
 }
 .description-text{
     font-family: 'Avenir', sans-serif;
@@ -55,7 +66,17 @@ html{
     @include font(25,34,800);
     text-transform: uppercase;   
 }
-
+.products__title-500{
+    font-family: 'Avenir', sans-serif;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    @include font(25,25,500);
+}
+.select-font{
+    font-family: 'Avenir', sans-serif;
+    color: var(--primary-dark); 
+    @include font(14,24,400);
+}
 // font-family: 'Tajawal', sans-serif; 1
 // @include font(14,17,500);
 // letter-spacing: 0.1em;
@@ -67,11 +88,6 @@ html{
 // color: var(--white-color);
 // @include font(90,92,500);
 // margin-bottom: 15px;
-
-// font-family: 'Avenir', sans-serif;  
-// margin-bottom: 34px;
-// color: var(--white-color);
-// @include font(14,19,400);
 
 //  font-family: 'Cormorant';
 // font-weight: 500;

@@ -8,7 +8,7 @@
                             <span>бренд</span>
                             american vintage
                         </h1>
-                        <p class="nav-text-font">Смотреть коллекцию</p>
+                        <router-link :to="{name: 'products'}" class="nav-text-font">Смотреть коллекцию</router-link>
                     </div>
                 </div>
             </section>
