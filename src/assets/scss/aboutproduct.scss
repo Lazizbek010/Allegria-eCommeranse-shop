@@ -28,11 +28,16 @@
             .main-img{
                 width: 428px;
                 height: 520px;
+                position: relative;
                 img{
                     width: inherit;
                     height: inherit;
                     object-fit: cover;
                     border-radius: 4px;
+                }
+                .heart{
+                    bottom: 20px;
+                    right: 20px;
                 }
             }
         }
@@ -132,6 +137,23 @@
                 color: var(--primary-dark);
                 width: 81px;
             }
+        }
+    }
+    .similar-products{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 15px;
+        position: relative;
+        margin-bottom: 100px;
+        .left, .right{
+            position: absolute;
+            top: 143px;
+        }
+        .left{
+            left: -38px;
+        }
+        .right{
+            right: -38px;
         }
     }
 }

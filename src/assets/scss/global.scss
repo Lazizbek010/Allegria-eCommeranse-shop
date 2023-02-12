@@ -32,6 +32,16 @@ html {
     padding: 0 50px;
 }
 
+.heart {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--white-color);
+}
+
 .btn {
     min-width: 213px;
     padding: 15px 0;

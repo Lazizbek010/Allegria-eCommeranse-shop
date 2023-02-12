@@ -56,13 +56,22 @@
             height: 325px;
             position: relative;
             margin-bottom: 15px;
-            img{
+            a{
+                display: block;
+                width: 270px;
+                height: 325px;
+            }
+            &-item{
                 width: inherit;
                 height: inherit;
                 object-fit: cover;
                 border-radius: 4px;
             }
-            .heart, .discount{
+            .heart{
+                right: 10px;
+                bottom: 10px;
+            }
+            .discount{
                 position: absolute;
                 width: 45px;
                 height: 45px;
@@ -70,12 +79,6 @@
                 display: grid;
                 place-items: center;
                 right: 10px;
-            }
-            .heart{
-                bottom: 10px;
-                background: var(--white-color);
-            }
-            .discount{
                 top: 10px;
                 background: var(--tomato-color);
                span{
