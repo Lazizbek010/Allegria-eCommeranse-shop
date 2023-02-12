@@ -41,10 +41,41 @@
             </div>
             <button class="btn show-more-btn">Показать больше</button>
         </div>
-        <div class="menu">
-            <ul>
-                
+        <div class="products__menu">
+            <ul class="gender">
+                <li class="description-text active">Женщины</li>
+                <li class="description-text">Мужчины</li>
             </ul>
+            <h3 class="products__menu__item"><span>ОДЕЖДА</span><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                    height="2" fill="none">
+                    <path stroke="#E64926" d="M0 1h10" />
+                </svg>
+                <ul>
+                    <li class="select-font">Свитера толтовки</li>
+                    <li class="select-font">Платья юбки</li>
+                    <li class="select-font">Футболки и топы </li>
+                    <li class="select-font">Брюки и шорты</li>
+                    <li class="select-font">Рубашки</li>
+                    <li class="select-font">Комбинезоны</li>
+                    <li class="select-font">Леггинсы</li>
+                </ul>
+            </h3>
+            <h3 class="products__menu__item"><span>ОБУВЬ</span> <svg xmlns="http://www.w3.org/2000/svg" width="10"
+                    height="10" fill="none">
+                    <path stroke="#000" d="M5 0v10M0 5h10" />
+                </svg></h3>
+            <h3 class="products__menu__item"><span>СУМКИ</span> <svg xmlns="http://www.w3.org/2000/svg" width="10"
+                    height="10" fill="none">
+                    <path stroke="#000" d="M5 0v10M0 5h10" />
+                </svg></h3>
+            <h3 class="products__menu__item"><span>АКСЕСУАРЫ</span> <svg xmlns="http://www.w3.org/2000/svg" width="10"
+                    height="10" fill="none">
+                    <path stroke="#000" d="M5 0v10M0 5h10" />
+                </svg></h3>
+            <h3 class="products__menu__item"><span>БЕЛЬЕ</span> <svg xmlns="http://www.w3.org/2000/svg" width="10"
+                    height="10" fill="none">
+                    <path stroke="#000" d="M5 0v10M0 5h10" />
+                </svg></h3>
         </div>
     </div>
 </template>

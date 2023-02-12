@@ -2,11 +2,13 @@ import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', {
   state: () => ({
-    num: 0
+    cart: 0,
+    heart: true,
   }),
   actions:{
-    incMe(){
-        this.num++
+    addToCart(){
+        this.cart++
+        this.heart = !this.heart
     }
   }
 })

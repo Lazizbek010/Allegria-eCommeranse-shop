@@ -1,0 +1,137 @@
+.about-product{
+    padding-top: 61.2px;
+    .about-us__hero__list{
+        margin-bottom: 23px;
+    }
+    &__container{
+        max-width: 840px;
+        margin: 0 auto;
+    }
+    &__info{
+        display: flex;
+        gap: 35px;
+        margin-bottom: 146px;
+        &__img{
+            display: flex;
+            gap: 10px;
+            .total-img{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                img{
+                    width: 85px;
+                    height: 105px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                }
+            }
+            .main-img{
+                width: 428px;
+                height: 520px;
+                img{
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                    border-radius: 4px;
+                }
+            }
+        }
+        &__setting{
+            .about-product__name{
+                font-weight: 500;
+            }
+            .about-product__title{
+                font-family: 'Avenir';
+                text-transform: capitalize;
+                @include font(16,22,300);
+                margin-bottom: 6px;
+            }
+            .about-product__price{
+                font-family: 'Avenir';
+                letter-spacing: 0.045em;
+                text-transform: uppercase;
+                @include font(14,19,500);
+                margin-bottom: 20px;
+                .product-old-item{
+                    color: var(--line-color);
+                    text-decoration: line-through;
+                }
+                .product-new-item{
+                    color: var(--tomato-color);    
+                }
+            }
+            .about-product__size{
+                font-family: 'Avenir', sans-serif;
+                @include font(12,20,400);
+            }
+            .about-product__size-list{
+                display: flex;
+                gap: 10px;
+                margin-bottom: 7px;
+                li{
+                    width: 35px;
+                    height: 35px;
+                    font-family: 'Avenir', sans-serif;
+                    @include font(12,20,400);
+                    padding: 8px 10px;
+                    border: 1px solid var(--light-color1);
+                    background: var(--light-color1);
+                    &.have{
+                        background: var(--white-color);
+                    }
+                }
+            }
+            .about-product__link-400{
+                margin-bottom: 20px;
+                text-decoration-line: underline;    
+            }
+            .about-product__color-list{
+                display: flex;
+                gap: 15px;
+                margin-bottom: 19px;
+                li{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    &:nth-child(1){
+                        border: 1px solid var( --light-color1);
+                        background: var(--white-color);
+                    }
+                    &:nth-child(2){
+                        background: #FF0000;
+                    }
+                    &:nth-child(3){
+                        background: #1931AA;
+                    }
+                    &:nth-child(4){
+                        background: var(--black-color);
+                    }
+                }
+            }
+            .selection1{
+                display: flex;
+                flex-direction: column;
+                button{
+                    width: 280px;
+                }
+            }
+            .selection2{
+                margin: 20px 0;
+                width: 280px;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    opacity: 0.3; 
+                    background: transparent;  
+                }
+            }
+            .about-product__desc-500{
+                margin-bottom: 16px;
+            }
+            .about-product__desc-title{
+                color: var(--primary-dark);
+                width: 81px;
+            }
+        }
+    }
+}

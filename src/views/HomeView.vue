@@ -72,7 +72,7 @@
                 </div>
             </section>
             <section class="famous">
-                <center class="famous__title">Популярное</center>
+                <h1 class="famous__title">Популярное</h1>
                 <div class="famous__card">
                     <FamousItemComponent v-for="item in 4" :key="item"></FamousItemComponent>
                     <div class="famous__card__arrow-left famous__card__arrow">
