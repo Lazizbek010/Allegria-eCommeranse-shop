@@ -1,2 +1,43 @@
-// 1.Navbarga media qil
-// 2.Hero
+@media(max-width:1115px) {
+    // Global
+    .hamburger{
+        display: block;
+    }
+    .container{
+        padding: 0 20px;
+    }
+    // Navbar
+    .nav .container .nav-right__menu {
+        display: none;
+    }
+    .nav .container .nav-right .langs{
+        display: none;
+    }
+}
+@media(max-width:850px) {
+    // About US
+    .about-us{
+        &__hero{
+            &__info{
+                padding-top: 157px;
+                padding-bottom: 181px;
+            }
+        } 
+    }
+}
+
+@media(max-width:500px) {
+    // Navbar
+    .container{
+        padding: 0 15px;
+    }
+    // About US
+    .about-us{
+        &__hero{
+            &__info{
+                padding-top: 165px;
+                padding-bottom: 165px;
+            }
+        } 
+    }
+}

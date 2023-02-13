@@ -15,7 +15,7 @@
         transform: translateX(-50%);
         display: flex;
         gap: 51px;
-
+        z-index: 250;
         li {
             font-family: 'Tajawal', sans-serif;
             @include font(14, 17, 500);
@@ -29,11 +29,10 @@
             }
         }
     }
-    section {
+    &__slide{
         width: 100%;
         height: inherit;
-        background-repeat: no-repeat;
-        // background-attachment: fixed;
+        border: 2px solid red;
     }
     &-info{
         h1{
@@ -43,7 +42,7 @@
                 @include font(20,24,500);
             }
         }
-        p{
+        a{
             letter-spacing: 0.045em;
             color: var(--tomato-color);
         }
@@ -53,7 +52,7 @@
             linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
             url('../images/bg-hero-one.png');
         background-size: cover;
-
+        background-repeat: no-repeat;
         &__info {
             text-align: center;
             padding-top: 182px;
@@ -75,7 +74,7 @@
         background: url('../images/bg-hero-two.png');
         background-size: 941px 585px;
         background-position: right;
-
+        background-repeat: no-repeat;
         &__info {
             padding-top: 150px;
             h1 {
@@ -88,6 +87,7 @@
         background: url('../images/bg-hero-three.png');
         background-size: 941px 585px;
         background-position: right;
+        background-repeat: no-repeat;
         &__info {
             padding-top: 195px;
             h1 {
@@ -100,6 +100,7 @@
         background:  url('../images/bg-hero-four2.png'), url('../images/bg-hero-four1.png');
         background-size: 410px 358px, 557px 584px;
         background-position: bottom 50% right 455px, right;
+        background-repeat: no-repeat;
         &__info {
             padding-top: 195px;
             h1 {

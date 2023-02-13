@@ -31,6 +31,9 @@
                     <div class="nav-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" fill="none"><path stroke="#254A5A" d="M.5 6.5h15v12H.5zM13 6A5 5 0 0 0 3 6"/></svg>
                     </div>
+                    <div class="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="9" fill="none"><path stroke="#0F303F" d="M0 1h20M10 8h10"/></svg>
+                    </div>
                 </div>
             </div>
         </div>

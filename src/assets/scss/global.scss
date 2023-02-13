@@ -52,7 +52,10 @@ html {
     text-transform: uppercase;
     @include font(15, 22, 500);
 }
-
+// Hamburger Menu
+.hamburger{
+    display: none;
+}
 .overlay{
     position: fixed;
     top: 0;
@@ -71,6 +74,7 @@ html {
     border-radius: 6px;
     z-index: 1010;
 }
+
 // .showModal{
 //     transform: translate(-50%, -50%) scale(1);
 // }

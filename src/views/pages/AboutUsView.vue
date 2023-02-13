@@ -14,11 +14,11 @@
                 </div>
             </div>
         </div>
-        <div class="about-us__text1">
+        <!-- <div class="about-us__text1">
             <p class="description-text">American Vintage в первую очередь – это качественный трикотаж, изящная красота и
                 летящий крой.</p>
-        </div>
-        <div class="about-us__img1">
+        </div> -->
+        <!-- <div class="about-us__img1">
             <div class="container">
                 <div class="about-us__img1__left">
                     <img src="@/assets/images/about-us-img01.png" alt="">
@@ -35,8 +35,8 @@
                     <img src="@/assets/images/about-us-img02.png" alt="">
                 </div>
             </div>
-        </div>
-        <div class="about-us__info">
+        </div> -->
+        <!-- <div class="about-us__info">
             <div class="about-us__info-container">
                 <div class="about-us__info__text">
                     <h1 class="avenir-800">о нас</h1>
@@ -56,10 +56,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="about-us__warning">
+        </div> -->
+        <!-- <div class="about-us__warning">
             <p class="description-text">Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.</p>
-        </div>
+        </div> -->
     </div>
 </template>
 

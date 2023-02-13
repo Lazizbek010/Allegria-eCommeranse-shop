@@ -1,57 +1,64 @@
 <template>
     <div class="home">
-        <header class="hero">
-            <section class="hero__one">
+        <swiper class="hero" 
+        :space-between="30" 
+        :slides-per-view="1"  
+        :pagination="{ clickable: true }" 
+        :centeredSlides="true"
+        :autoplay="{
+      delay: 2500,
+    }">
+            <swiper-slide class="hero__slide hero__one">
                 <div class="container">
                     <div class="hero__one__info hero-info">
                         <h1 class="cormorant-500">
                             <span>бренд</span>
                             american vintage
                         </h1>
-                        <router-link :to="{name: 'products'}" class="nav-text-font">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
                     </div>
                 </div>
-            </section>
-            <!-- <section class="hero__two">
+            </swiper-slide>
+            <swiper-slide class="hero__slide hero__two">
                 <div class="container">
                     <div class="hero__two__info hero-info">
                         <h1>
                             <span>бренд</span>
                             george gina <br>lucy
                         </h1>
-                        <p class="nav-text-font">Смотреть коллекцию</p>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
                     </div>
                 </div>
-            </section> -->
-            <!-- <section class="hero__three">
+            </swiper-slide>
+            <swiper-slide class="hero__slide hero__three">
                 <div class="container">
                     <div class="hero__three__info hero-info">
                         <h1>
                             <span>бренд</span>
                             DEHA
                         </h1>
-                        <p class="nav-text-font">Смотреть коллекцию</p>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
                     </div>
                 </div>
-            </section> -->
-            <!-- <section class="hero__four">
+            </swiper-slide>
+            <swiper-slide class="hero__slide hero__four">
                 <div class="container">
                     <div class="hero__four__info hero-info">
                         <h1>
                             <span>бренд</span>
                             birkenstock
                         </h1>
-                        <p class="nav-text-font">Смотреть коллекцию</p>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
                     </div>
                 </div>
-            </section> -->
+            </swiper-slide>
             <ul class="active-section">
                 <li class="active">01</li>
                 <li>02</li>
                 <li>03</li>
                 <li>04</li>
             </ul>
-        </header>
+        </swiper>
         <main>
             <section class="bg-collection">
                 <div class="collection">
@@ -73,8 +80,12 @@
             </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <div class="famous__card">
-                    <FamousItemComponent v-for="item in 4" :key="item"></FamousItemComponent>
+                <swiper class="famous__card"  
+                :slides-per-view="4" 
+                :space-between="45">
+                    <SwiperSlide v-for="item in 14" :key="item">
+                        <FamousItemComponent ></FamousItemComponent>
+                    </SwiperSlide>
                     <div class="famous__card__arrow-left famous__card__arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
                             <path stroke="#254A5A" d="M17 1 1 20.5 17 40" />
@@ -85,7 +96,7 @@
                             <path stroke="#254A5A" d="m1 1 16 19.5L1 40" />
                         </svg>
                     </div>
-                </div>
+                </swiper>
                 <div class="famous__decoration">
                     <span class="famous__decoration__left"></span>
                     <span class="famous__decoration__right"></span>
@@ -116,7 +127,8 @@
                 <div class="about__container">
                     <div class="about__container__info">
                         <h1><span>О</span>нас</h1>
-                        <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLoreLorem ipsumLorem
+                        <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
+                            ipsumLoreLorem ipsumLorem
                             ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
                             ipsumLorem ipsumLorem ipsumLorem ipsumipLorem ipsumLoremLorem ipsumLorem ipsumLorem
                             ipsumLorem ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem </p>
@@ -132,7 +144,10 @@
 
 <script setup>
 import FamousItemComponent from '../components/FamousItemComponent.vue';
-
+import {Autoplay, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
 </script>
 
 <style lang="scss" scoped>
