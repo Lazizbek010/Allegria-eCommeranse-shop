@@ -53,9 +53,34 @@ html {
     @include font(15, 22, 500);
 }
 
-// .buy-btn{
-
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:  rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white-color);
+    border-radius: 6px;
+    z-index: 1010;
+}
+// .showModal{
+//     transform: translate(-50%, -50%) scale(1);
 // }
+.close{
+    position: absolute;
+    background: transparent;
+    svg{
+        pointer-events: none;
+    }
+}
 .add-to-cart-btn {
     background: transparent;
     border: 1px solid var(--primary-dark);
