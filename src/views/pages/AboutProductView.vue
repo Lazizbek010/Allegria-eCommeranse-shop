@@ -140,13 +140,12 @@ function closeModalReturn() {
     openReturnModal.value = false;
 }
 
-// document.addEventListener('keydown', (e)=>{
-//     console.log(e.target);
-//     if(e.target.value = 'Escape'){
-//         openPaymentModal.value = false;
-//         openReturnModal.value = false;
-//     }
-// })
+document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape'){
+        openPaymentModal.value = false;
+        openReturnModal.value = false;
+    }
+})
 
 </script>
 

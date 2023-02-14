@@ -1,13 +1,15 @@
 <template>
     <div class="home">
-        <swiper class="hero" 
-        :space-between="30" 
-        :slides-per-view="1"  
-        :pagination="{ clickable: true }" 
-        :centeredSlides="true"
-        :autoplay="{
-      delay: 2500,
-    }">
+        <swiper 
+        :modules="modules1" 
+        class="hero" :space-between="30" 
+        :slides-per-view="1" 
+        :pagination="{ clickable: true }"
+            :centeredSlides="true" :autoplay="{
+                delay: 2500,
+            }"
+           navigation
+            >
             <swiper-slide class="hero__slide hero__one">
                 <div class="container">
                     <div class="hero__one__info hero-info">
@@ -52,12 +54,12 @@
                     </div>
                 </div>
             </swiper-slide>
-            <ul class="active-section">
+            <!-- <ul class="active-section">
                 <li class="active">01</li>
                 <li>02</li>
                 <li>03</li>
                 <li>04</li>
-            </ul>
+            </ul> -->
         </swiper>
         <main>
             <section class="bg-collection">
@@ -80,11 +82,9 @@
             </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <swiper class="famous__card"  
-                :slides-per-view="4" 
-                :space-between="45">
+                <swiper class="famous__card" :slides-per-view="4" :space-between="45" :modules="modules2" navigation>
                     <SwiperSlide v-for="item in 14" :key="item">
-                        <FamousItemComponent ></FamousItemComponent>
+                        <FamousItemComponent></FamousItemComponent>
                     </SwiperSlide>
                     <div class="famous__card__arrow-left famous__card__arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
@@ -143,13 +143,36 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
 import FamousItemComponent from '../components/FamousItemComponent.vue';
-import {Autoplay, Pagination } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+const modules1 = [Navigation, Pagination, Scrollbar, A11y]
+const modules2 = [Navigation, Pagination, Scrollbar, A11y]
+
+const mounted = onMounted(() => {
+    let dots = document.querySelectorAll('.swiper-pagination-bullet');
+    dots.forEach((dot,i) => {
+        dot.innerText = i + 1
+    })
+})
+
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+.swiper{
+    .swiper-pagination-bullet{
+        width: 50px;
+        height: 50px;
+        background: red;
+        &::after{
+            content: attr('aria-label');
+            display: block;
+        }
+    }
+}
 </style>

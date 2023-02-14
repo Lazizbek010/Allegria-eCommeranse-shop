@@ -3,3 +3,9 @@
     line-height: $lh + px;
     font-weight: $fw;
 }
+
+// @mixin media($size){
+//     @media (max-width: $size) {
+//         @content;
+//     }
+// }

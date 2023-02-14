@@ -14,6 +14,22 @@
         display: none;
     }
 }
+@media(max-width:1020px) {
+    // About US
+    .about-us{
+        &__img1{
+            .container{
+                flex-direction: column;
+                gap: 180px;
+            }
+        }
+        &__info{
+            &__img{
+                gap: 70px;
+            }
+        }
+    }
+}
 @media(max-width:850px) {
     // About US
     .about-us{
@@ -21,11 +37,112 @@
             &__info{
                 padding-top: 157px;
                 padding-bottom: 181px;
+                
             }
         } 
+        &__text1{
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+        &__img1{
+            padding-bottom: 90px;
+            &__left{
+                width: 345px;
+                height: 345px;
+            }
+            &__right{
+                width: 255px;
+                height: 200px;
+                &-shape{
+                    width: 200px;
+                    height: 129px;
+                    left: 46px;
+                    top: -60px;
+                    transform: rotate(110deg);
+                    img{
+                        width: inherit;
+                        height: inherit;
+                    }
+                }
+                img{
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__info{
+            padding-bottom: 90px;
+            &__text{
+                margin: 0 auto;
+                margin-bottom: 90px;
+            }
+            &__img{
+                gap: 53px;
+                &__left{
+                    width: 280px;
+                    height: 280px;
+                }
+                &__right{
+                    width: 195px;
+                    height: 195px;
+                    &-shape{
+                        width: 220px;
+                        top: 140px;
+                        left: 30px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        &__warning{
+            padding: 67px 0 81px;
+        }
     }
 }
-
+@media (max-width:665px){
+    // About US
+    .about-us{
+        .container{
+            gap: 130px;
+        }
+        &__info{
+            &__text{
+               width: 100%;
+               padding: 0 15px;
+               h1{
+                margin-bottom: 25px;
+                @include font(20,27,800);
+               }
+            }
+        }
+    }
+    // FOOTER==>
+    .footer{
+        padding-top: 51px;
+        &__info{
+            &__title{
+                @include font(20,21,600);
+                margin-bottom: 30px;
+            }
+            &__form{
+                button{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width:600px){
+    // About US
+    .about-us{
+        &__info{
+            &__img{
+                flex-direction: column;
+            }
+        }
+    }
+}
 @media(max-width:500px) {
     // Navbar
     .container{
@@ -37,7 +154,53 @@
             &__info{
                 padding-top: 165px;
                 padding-bottom: 165px;
+                h1{
+                    @include font(30,36,500);
+                }
             }
         } 
+        &__text1{
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        &__img1{
+            padding-bottom: 84px;
+            &__left{
+                width: 100%;
+            }
+        }
+        &__info{
+            padding-bottom: 70px;
+            &__text{
+                margin-bottom: 70px;
+            }
+        }
+        &__warning{
+            padding: 58px 15px 58px;
+        }
+    }
+
+    // FOOTER==>
+    .footer{
+        padding-top: 91px;
+        &__info{
+            &__title{
+                @include font(20,26,600);
+            }
+            &__list{
+                gap: 20px;
+                padding: 0 10px;
+                a{
+                    @include font(14,19,400);
+                }
+            }
+        }
+        &__author{
+            .container{
+                p{
+                    @include font(8,11,400);
+                }
+            }
+        }
     }
 }

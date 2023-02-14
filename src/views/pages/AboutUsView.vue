@@ -14,29 +14,27 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="about-us__text1">
+        <div class="about-us__text1">
+            <div class="container">
+                <h1>Заголовок</h1>
             <p class="description-text">American Vintage в первую очередь – это качественный трикотаж, изящная красота и
-                летящий крой.</p>
-        </div> -->
-        <!-- <div class="about-us__img1">
+                летящий крой. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam optio hic modi totam consequatur assumenda repudiandae, suscipit commodi magnam soluta similique, quis id veritatis cupiditate ut illum placeat necessitatibus sit?</p>
+            </div>
+        </div>
+        <div class="about-us__img1">
             <div class="container">
                 <div class="about-us__img1__left">
                     <img src="@/assets/images/about-us-img01.png" alt="">
                 </div>
                 <div class="about-us__img1__right">
                     <div class="about-us__img1__right-shape">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="273" height="299" fill="none">
-                            <path fill="#CEC6C4" stroke="#CEC6C4" stroke-width=".393"
-                                d="M272.018 232.636.432 66.423l.205-.335L272.223 232.3z" />
-                            <path stroke="#CEC6C4"
-                                d="M102.218 75.8a61.499 61.499 0 0 0-24.01 116.72 61.51 61.51 0 0 0 31.534 6.038 61.502 61.502 0 0 0 51.051-35.156" />
-                        </svg>
+                        <img src="@/assets/images/about-shape.svg" alt="">
                     </div>
                     <img src="@/assets/images/about-us-img02.png" alt="">
                 </div>
             </div>
-        </div> -->
-        <!-- <div class="about-us__info">
+        </div>
+        <div class="about-us__info">
             <div class="about-us__info-container">
                 <div class="about-us__info__text">
                     <h1 class="avenir-800">о нас</h1>
@@ -56,10 +54,10 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- <div class="about-us__warning">
+        </div>
+        <div class="about-us__warning">
             <p class="description-text">Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.</p>
-        </div> -->
+        </div>
     </div>
 </template>
 

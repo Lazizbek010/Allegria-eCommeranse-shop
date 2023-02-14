@@ -2,7 +2,7 @@
   <div class="app">
     <NavComponent></NavComponent>
     <router-view/>
-    <!-- <FooterComponent></FooterComponent> -->
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 

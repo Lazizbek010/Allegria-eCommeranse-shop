@@ -15,6 +15,10 @@
         .logo{
             width: 129px;
             height: 16px;
+            // @include media(1000px){
+            //     width: 20px;
+            //     height: 15pxx;
+            // }
             img{
                 width: inherit;
                 height: inherit;
