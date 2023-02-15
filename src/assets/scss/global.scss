@@ -78,6 +78,7 @@ html {
     border-radius: 6px;
     z-index: 1010;
 }
+// Filter Modal
 .filtr-modal{
     background: var(--white-color);
     position: fixed;
@@ -92,13 +93,48 @@ html {
         padding: 28px 40px;
         justify-content: space-between;
         align-items: center;
-        font-family: 'Avenir', sans-serif;
-        text-transform: uppercase;
-        @include font(18, 18, 500);
-        border: 1px solid var(--light-color1);
     }
 }
-
+.filst-sort-modal__title{
+    font-family: 'Avenir', sans-serif;
+    text-transform: uppercase;
+    @include font(18, 18, 500);
+    border-bottom: 1px solid var(--light-color1);
+}
+// SOTR MODAL
+.sort-modal{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1012;
+    background: var(--white-color);
+    h1{
+        padding: 40px 0;
+        text-align-last: center;
+        position: relative;
+        margin-bottom: 55px;
+        .sort-modal-close{
+            position: absolute;
+            top: 40px;
+            right: 20px;
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 56px;
+        li{
+            font-family: 'Avenir', sans-serif;
+            @include font(14,28,500);
+            &.active{
+                color: var(--tomato-color);
+                list-style-type: circle;
+            }
+        }
+    }
+}
 // .showModal{
 //     transform: translate(-50%, -50%) scale(1);
 // }

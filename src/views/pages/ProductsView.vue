@@ -57,7 +57,7 @@
                     <!-- ========== Filtr Modal =========== -->
                     <div class="overlay" v-show="filtrModalEvent" @click="closeFiltrModal"></div>
                     <div class="filtr-modal" v-show="filtrModalEvent">
-                        <h1>
+                        <h1 class="filst-sort-modal__title">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" fill="none"><path stroke="#0F303F" d="M22 7.5H1m0 0 6.5-7M1 7.5l6.5 7"/></svg>
                             </div>
@@ -67,11 +67,25 @@
                             </div>
                         </h1>
                     </div>
-                    <div class="select select-font">
+                    <div class="select select-font" @click="openSortModal">
                         <span>Сортировать</span>
                         <div class="triangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
                         </div>
+                    </div>
+                    <!-- =================== SORT MODAL ============= -->
+                    <div class="overlay" v-show="sortModalEvent" @click="closeFiltrModal"></div>
+                    <div class="sort-modal" v-show="sortModalEvent">
+                        <h1 class="filst-sort-modal__title"><span>Сортировка</span>
+                            <div class="sort-modal-close" @click="closeFiltrModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"><path stroke="#0F303F" d="m1 1 20 20M21 1 1 21"/></svg>
+                            </div>
+                        </h1>
+                        <ul>
+                            <li class="active">Новинки</li>
+                            <li>По возрастанию цены</li>
+                            <li>По убыванию цены</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -134,6 +148,7 @@ import ProductComponent from '../../components/ProductComponent.vue';
 import { ref } from 'vue';
 const hidden = ref(true)
 const filtrModalEvent = ref(false)
+const sortModalEvent = ref(false)
 function openList(){
     hidden.value = !hidden.value
 }
@@ -142,11 +157,16 @@ function openFiltrModal(){
 }
 function closeFiltrModal(){
     filtrModalEvent.value = false
+    sortModalEvent.value = false
+}
+function openSortModal(){
+    sortModalEvent.value = true
 }
 //  DOCUMENT ADDEVENTLISTENER 2
 document.addEventListener('keydown', (e)=>{
     if(e.key === 'Escape'){
         filtrModalEvent.value = false;
+        sortModalEvent.value = false;
     }
 })
 </script>
