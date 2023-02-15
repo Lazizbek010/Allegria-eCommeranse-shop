@@ -74,6 +74,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        background-position: center;
         margin-bottom: 120px;
         &__text{
             max-width: 627px;
@@ -128,9 +129,10 @@
 
 .lucy{
     &__info{
-        max-width: 627px;
+        max-width: 657px;
         margin: 0 auto;
         margin-bottom: 50px;
+        padding: 0 15px;
         text-align: center;
         h1{
             margin-bottom: 15px;
@@ -148,6 +150,7 @@
         background: url('../images/bg-lucy-img.png');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
     }
     &__about{
         padding: 120px 0;
@@ -222,8 +225,8 @@
                 }
                 &-shape{
                     position: absolute;
-                    left: -95px;
-                    bottom: -140px;
+                    left: -80px;
+                    bottom: -110px;
                 }
             }
         }

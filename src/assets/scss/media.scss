@@ -1,3 +1,4 @@
+// ------------------------------------------------
 @media(max-width:1115px) {
     // Global
     .hamburger{
@@ -14,6 +15,7 @@
         display: none;
     }
 }
+// --------------------------------------------------
 @media(max-width:1020px) {
     // About US
     .about-us{
@@ -30,6 +32,7 @@
         }
     }
 }
+// -------------------------------------------------
 @media(max-width:850px) {
     // About US
     .about-us{
@@ -99,7 +102,110 @@
             padding: 67px 0 81px;
         }
     }
+    // ALL BRANDS
+    .brands{
+        &__hero{
+            &__info{
+                padding-top: 169px;
+                padding-bottom: 165px;
+                h1{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .american-vintage{
+        padding: 90px 0;
+        &__info{
+            gap: 46px;
+            &__left{
+                width: 260px;
+                height: 230px;
+            }
+            &__right{
+                width: 422px;
+                h1{
+                    margin-bottom: 25px;
+                }
+                img{
+                    width: 210px;
+                    height: 185px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .deha{
+        &__hero{
+            margin-bottom: 90px;
+            &__text{
+                padding: 167px 15px;
+            }
+        }
+        &__about{
+            justify-content: space-between;
+            margin-bottom: 90px;
+            &__left{
+                width: 422px;
+                p{
+                    margin: 25px 0 82px;
+                }
+                &__img{
+                    width: 210px;
+                    height: 185px;
+                    &__shape{
+                        display: none;
+                    }
+                }
+                
+            }
+            &__right{
+                width: 290px;
+                height: 270px;
+            }
+        }
+    }
+    .lucy{
+        &__about{
+            padding: 90px 0;
+            gap: 47px;
+            &__img{
+                height: 230px;
+            }   
+            &__text{
+                max-width: 422px;
+            }
+        }
+    }
+    .birkenstock{
+        &__about{
+            padding-top: 90px;
+            padding-bottom: 90px; 
+            gap: 46px;
+            &__left{
+                max-width: 422px;
+                h1{
+                    margin-bottom: 25px;
+                    margin-top: 25px;
+                } 
+                p{
+                    margin-bottom: 82px;
+                }   
+                &__img{
+                    width: 210px;
+                    height: 185px;
+                }
+            } 
+            &__right{
+                width: 260px;
+                height: 230px;
+            }  
+        } 
+    }
+    //ALL BRANDS END
+
 }
+// ---------------------------------------------------
 @media (max-width:665px){
     // About US
     .about-us{
@@ -117,6 +223,78 @@
             }
         }
     }
+    // ALL BRANDS
+    .american-vintage{
+        &__info{
+            flex-direction: column;
+            align-items: center;
+            &__left{
+                width: 360px;
+                height: 300px;
+            }
+            &__right{
+                width: 100%;
+                h1{
+                    margin-bottom: 25px;
+                }
+                img{
+                    width: 210px;
+                    height: 185px;
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+    .deha{
+        &__about{
+            flex-direction: column-reverse;
+            align-items: center;
+            &__left{
+                width: 100%;
+            }
+        }
+    }
+    .lucy{
+        &__about{
+            padding: 90px 0;
+            gap: 47px;
+            flex-direction: column;
+            &__img{
+                width: 280px;
+                height: 260px;
+            }   
+            &__text{
+                text-align: center;
+                max-width: 100%;
+            }
+        }
+    }
+    .birkenstock{
+        &__about{
+            gap: 46px;
+            flex-direction: column-reverse;
+            align-items: center;
+            &__left{
+                max-width: 100%;
+                h1{
+                    margin-bottom: 25px;
+                    margin-top: 25px;
+                } 
+                p{
+                    margin-bottom: 82px;
+                }   
+                &__img{
+                    width: 210px;
+                    height: 185px;
+                }
+            } 
+            &__right{
+                width: 290px;
+                height: 250px;
+            }  
+        } 
+    }
+    //ALL BRANDS END
     // FOOTER==>
     .footer{
         padding-top: 51px;
@@ -133,6 +311,7 @@
         }
     }
 }
+// -----------------------------------------------
 @media (max-width:600px){
     // About US
     .about-us{
@@ -143,11 +322,13 @@
         }
     }
 }
+// ----------------------------------------
 @media(max-width:500px) {
     // Navbar
     .container{
         padding: 0 15px;
     }
+
     // About US
     .about-us{
         &__hero{
@@ -179,6 +360,66 @@
             padding: 58px 15px 58px;
         }
     }
+
+    //ALL BRANDS
+    .brands{
+        &__hero{
+            &__info{
+                h1{
+                    @include font(24,26,500);
+                    span{
+                        @include font(14,17,500);
+                    }
+                }
+            }
+        }
+    }
+    .american-vintage{
+        &__info{
+            &__left{
+                width: 260px;
+                height: 230px;
+            }
+            &__right{
+                h1{
+                    margin-bottom: 20px;
+                    @include font(20,27,800);
+                }
+            }
+            
+        }
+    }
+    .deha{
+        &__about{
+            &__left{
+                h1{
+                    @include font(20,27,800);
+                }
+                p{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .lucy{
+        &__info{
+            h1{
+                @include font(24,28,500);
+                span{
+                @include font(14,17,500);
+                }
+            }
+        }
+        &__img{
+            height: 400px;
+        }
+    }
+    .birkenstock{
+        &__img{
+            padding: 160px 0;
+        }
+    }
+    //ALL BRANDS END
 
     // FOOTER==>
     .footer{
