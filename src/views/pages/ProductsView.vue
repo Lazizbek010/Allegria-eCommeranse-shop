@@ -9,22 +9,57 @@
         <div class="products__container">
             <h1 class="products__title-500">Кофти та піджаки</h1>
             <div class="products__select">
-                <select class="select-font" name="" id="">
-                    <option value="">Размер</option>
-                    <option value="">1</option>
-                </select>
-                <select class="select-font" name="" id="">
-                    <option value="">Цена</option>
-                    <option value="">2</option>
-                </select>
-                <select class="select-font" name="" id="">
-                    <option value="">Цвет</option>
-                    <option value="">3</option>
-                </select>
-                <select class="select-font" name="" id="">
-                    <option value="">Бренд</option>
-                    <option value="">4</option>
-                </select>
+                <div class="products__select__items">
+                    <div class="select select-font" @click="openList">
+                        <span>Размер</span>
+                        <div class="triangle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
+                        </div>
+                        <div class="select__list" :class="{'hidden': hidden}">
+                            <ul>
+                                <li class="about-product__link-400">XS</li>
+                                <li class="about-product__link-400">S</li>
+                                <li class="about-product__link-400">M</li>
+                                <li class="about-product__link-400">L</li>
+                                <li class="about-product__link-400">XL</li>
+                                <li class="about-product__link-400">XP</li>
+                            </ul>
+                            <button class="btn" id="btn-apply">Применить</button>
+                        </div>
+                    </div>
+                    <div class="select select-font">
+                        <span>Цена</span>
+                        <div class="triangle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="select select-font">
+                        <span>Цвет</span>
+                        <div class="triangle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="select select-font">
+                        <span>Бренд</span>
+                        <div class="triangle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__select__modals">
+                    <div class="select select-font">
+                        <span>Фильтры</span>
+                        <div class="triangle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="select select-font">
+                        <span>Сортировать</span>
+                        <div class="triangle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="all">
                 <div class="number-product select-font"><span>1200</span> товаров</div>
@@ -82,7 +117,11 @@
 
 <script setup>
 import ProductComponent from '../../components/ProductComponent.vue';
-
+import { ref } from 'vue';
+const hidden = ref(true)
+function openList(){
+    hidden.value = !hidden.value
+}
 </script>
 
 <style lang="scss" scoped>

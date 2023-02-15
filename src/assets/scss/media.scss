@@ -1,3 +1,21 @@
+@media(max-width:1185px){
+    .products{
+        &__card{
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            &__item{
+                width: 245px;
+                &__img{
+                    width: 245px;
+                    height: 300px;
+                    a{
+                        width: 245px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
 // ------------------------------------------------
 @media(max-width:1115px) {
     // Global
@@ -13,6 +31,20 @@
     }
     .nav .container .nav-right .langs{
         display: none;
+    }
+    //PRODUCTS PAGE
+    .products{
+        padding-top: 61.2px;
+        &__container{
+            max-width: 100%;
+            margin-left: 0;
+            margin: 0 auto;
+        }
+        &.container{
+            .products__menu{
+                display: none;
+            }
+        }
     }
 }
 // --------------------------------------------------
@@ -204,6 +236,37 @@
     }
     //ALL BRANDS END
 
+    //PRODUCTS PAGE
+     .products{
+        &__select__items{
+            display: none;
+        }
+        .all{
+            display: none;
+        }
+        &__select__modals{
+            display: flex;
+        }
+        &__title-500{
+            margin-bottom: 35px;
+            @include font(20,20,500);
+        }
+        
+            &__card{
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                &__item{
+                    width: 230px;
+                    &__img{
+                        width: 230px;
+                        height: 300px;
+                        a{
+                            width: 230px;
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+    }
 }
 // ---------------------------------------------------
 @media (max-width:665px){
@@ -322,6 +385,39 @@
         }
     }
 }
+// ---------------------------------------
+@media(max-width:515px){
+    .products{
+        &__card{
+            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+            &__item{
+                width: 165px;
+                &__img{
+                    width: 165px;
+                    height: 220px;
+                    margin-bottom: 20px;
+                    a{
+                        width: 165px;
+                        height: 220px;
+                    }
+                }
+                h2{
+                    @include font(14,19,500);
+                }
+                h6{
+                    @include font(14,20,300);
+                    margin-bottom: 1px;
+                }
+                p{
+                    @include font(13,18,500);   
+                    .product-new-item{
+                        font-weight: 500;  
+                    } 
+                }
+            }
+        }
+    }
+}
 // ----------------------------------------
 @media(max-width:500px) {
     // Navbar
@@ -420,10 +516,24 @@
         }
     }
     //ALL BRANDS END
-
+     //PRODUCTS PAGE
+     .products{
+        padding-top: 61.2px;
+        &__select{
+            &__modals{
+                gap: 5px;
+                margin-bottom: 25px;
+            }  
+        }
+        .show-more-btn{
+            margin: 50px auto;
+        }
+        &__title-500{
+            margin-bottom: 30px;
+        }
+    }
     // FOOTER==>
     .footer{
-        padding-top: 91px;
         &__info{
             &__title{
                 @include font(20,26,600);
@@ -445,3 +555,22 @@
         }
     }
 }
+
+@media(max-width: 375px){
+    .products{
+        &__card{
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            &__item{
+                width: 245px;
+                &__img{
+                    width: 245px;
+                    height: 300px;
+                    a{
+                        width: 245px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+} 

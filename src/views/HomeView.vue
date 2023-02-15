@@ -157,7 +157,7 @@ const modules2 = [Navigation, Pagination, Scrollbar, A11y]
 const mounted = onMounted(() => {
     let dots = document.querySelectorAll('.swiper-pagination-bullet');
     dots.forEach((dot,i) => {
-        dot.innerText = i + 1
+        dot.innerText =   i + 1
     })
 })
 
@@ -166,9 +166,8 @@ const mounted = onMounted(() => {
 <style lang="scss">
 .swiper{
     .swiper-pagination-bullet{
-        width: 50px;
-        height: 50px;
-        background: red;
+        background: transparent;
+        margin-right: 51px;
         &::after{
             content: attr('aria-label');
             display: block;

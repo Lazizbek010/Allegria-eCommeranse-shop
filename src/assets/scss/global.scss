@@ -53,6 +53,9 @@ html {
     text-transform: uppercase;
     @include font(15, 22, 500);
 }
+.hidden{
+    display: none;
+}
 // Hamburger Menu
 .hamburger{
     display: none;

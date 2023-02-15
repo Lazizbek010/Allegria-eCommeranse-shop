@@ -6,6 +6,7 @@
     &__container{
         max-width: 840px;
         margin: 0 auto;
+        margin-left: 245px;
         .all{
             display: flex;
             justify-content: space-between;
@@ -27,16 +28,63 @@
         margin-bottom: 45px;
     }
     &__select{
-        display: flex;
-        gap: 5px;
-        margin-bottom: 24px;
-        select{
+        .select{
             padding: 9px 15px;
             border: 1px solid var(--light-color1);
             width: 185px;
             outline: none;
-            option{
-                padding: 10px;
+            position: relative;
+            .triangle{
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%) rotate(180deg);
+            }
+            &__list{
+                position: absolute;
+                left: 0;
+                top: 43px;
+                width: 100%;
+                border: 1px solid var(--light-color1);
+                z-index: 50;
+                background: var(--white-color);
+                ul{
+                    padding: 10px 8px 0 7px;
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                    li{
+                        display: grid;
+                        width: 35px;
+                        height: 35px;
+                        place-items: center;
+                        border: 1px solid var(--light-color1);
+                        &:hover{
+                            border-color: var(--primary-dark);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                #btn-apply{
+                    min-width: 100%;
+                    padding: 8px 0;
+                    @include font(14, 19, 400);
+                }
+            }
+        }
+        &__items{
+            display: flex;
+            gap: 5px;
+            margin-bottom: 24px;
+            
+        }
+        &__modals{
+            display: none;
+            gap: 10px;
+            margin-bottom: 40px;
+            .select{
+               flex-grow: 1;
             }
         }
     }
