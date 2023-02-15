@@ -1,13 +1,16 @@
-@media(max-width:1185px){
-    .products{
-        &__card{
+@media(max-width:1185px) {
+    .products {
+        &__card {
             grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-            &__item{
+
+            &__item {
                 width: 245px;
-                &__img{
+
+                &__img {
                     width: 245px;
                     height: 300px;
-                    a{
+
+                    a {
                         width: 245px;
                         height: 300px;
                     }
@@ -16,120 +19,187 @@
         }
     }
 }
+
 // ------------------------------------------------
 @media(max-width:1115px) {
+
     // Global
-    .hamburger{
+    .hamburger {
         display: block;
     }
-    .container{
+
+    .container {
         padding: 0 20px;
     }
+
     // Navbar
     .nav .container .nav-right__menu {
         display: none;
     }
-    .nav .container .nav-right .langs{
+
+    .nav .container .nav-right .langs {
         display: none;
     }
+
     //PRODUCTS PAGE
-    .products{
+    .products {
         padding-top: 61.2px;
-        &__container{
+
+        &__container {
             max-width: 100%;
             margin-left: 0;
             margin: 0 auto;
         }
-        &.container{
-            .products__menu{
+
+        &.container {
+            .products__menu {
                 display: none;
                 position: fixed;
                 left: calc(100% - 360px);
                 right: 40px;
                 top: 160px;
                 width: 320px;
-                &.block{
+
+                &.block {
                     display: block;
                 }
             }
         }
     }
+
+    // About Product Page
+    .about-product {
+        padding-top: 61.2px;
+    }
 }
+
 // --------------------------------------------------
 @media(max-width:1020px) {
+
     // About US
-    .about-us{
-        &__img1{
-            .container{
+    .about-us {
+        &__img1 {
+            .container {
                 flex-direction: column;
                 gap: 180px;
             }
         }
-        &__info{
-            &__img{
+
+        &__info {
+            &__img {
                 gap: 70px;
             }
         }
     }
 }
+
+// -------------------------------------------------
+@media(max-width:880px) {
+    .about-product {
+        &__info {
+            flex-direction: column;
+            align-items: center;
+
+            &__setting {
+                text-align: center;
+                width: 100%;
+
+                .about-product__color-list {
+                    justify-content: center;
+                }
+
+                .about-product__size-list {
+                    justify-content: center;
+                }
+
+                .selection1 {
+                    gap: 5px;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+
+                .selection2 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 // -------------------------------------------------
 @media(max-width:850px) {
+
     // About US
-    .about-us{
-        &__hero{
-            &__info{
+    .about-us {
+        &__hero {
+            &__info {
                 padding-top: 157px;
                 padding-bottom: 181px;
-                
+
             }
-        } 
-        &__text1{
+        }
+
+        &__text1 {
             padding-top: 90px;
             padding-bottom: 90px;
         }
-        &__img1{
+
+        &__img1 {
             padding-bottom: 90px;
-            &__left{
+
+            &__left {
                 width: 345px;
                 height: 345px;
             }
-            &__right{
+
+            &__right {
                 width: 255px;
                 height: 200px;
-                &-shape{
+
+                &-shape {
                     width: 200px;
                     height: 129px;
                     left: 46px;
                     top: -60px;
                     transform: rotate(110deg);
-                    img{
+
+                    img {
                         width: inherit;
                         height: inherit;
                     }
                 }
-                img{
+
+                img {
                     width: inherit;
                     height: inherit;
                     object-fit: cover;
                 }
             }
         }
-        &__info{
+
+        &__info {
             padding-bottom: 90px;
-            &__text{
+
+            &__text {
                 margin: 0 auto;
                 margin-bottom: 90px;
             }
-            &__img{
+
+            &__img {
                 gap: 53px;
-                &__left{
+
+                &__left {
                     width: 280px;
                     height: 280px;
                 }
-                &__right{
+
+                &__right {
                     width: 195px;
                     height: 195px;
-                    &-shape{
+
+                    &-shape {
                         width: 220px;
                         top: 140px;
                         left: 30px;
@@ -138,36 +208,45 @@
                 }
             }
         }
-        &__warning{
+
+        &__warning {
             padding: 67px 0 81px;
         }
     }
+
     // ALL BRANDS
-    .brands{
-        &__hero{
-            &__info{
+    .brands {
+        &__hero {
+            &__info {
                 padding-top: 169px;
                 padding-bottom: 165px;
-                h1{
+
+                h1 {
                     margin-bottom: 20px;
                 }
             }
         }
     }
-    .american-vintage{
+
+    .american-vintage {
         padding: 90px 0;
-        &__info{
+
+        &__info {
             gap: 46px;
-            &__left{
+
+            &__left {
                 width: 260px;
                 height: 230px;
             }
-            &__right{
+
+            &__right {
                 width: 422px;
-                h1{
+
+                h1 {
                     margin-bottom: 25px;
                 }
-                img{
+
+                img {
                     width: 210px;
                     height: 185px;
                     margin-left: 0;
@@ -175,140 +254,173 @@
             }
         }
     }
-    .deha{
-        &__hero{
+
+    .deha {
+        &__hero {
             margin-bottom: 90px;
-            &__text{
+
+            &__text {
                 padding: 167px 15px;
             }
         }
-        &__about{
+
+        &__about {
             justify-content: space-between;
             margin-bottom: 90px;
-            &__left{
+
+            &__left {
                 width: 422px;
-                p{
+
+                p {
                     margin: 25px 0 82px;
                 }
-                &__img{
+
+                &__img {
                     width: 210px;
                     height: 185px;
-                    &__shape{
+
+                    &__shape {
                         display: none;
                     }
                 }
-                
+
             }
-            &__right{
+
+            &__right {
                 width: 290px;
                 height: 270px;
             }
         }
     }
-    .lucy{
-        &__about{
+
+    .lucy {
+        &__about {
             padding: 90px 0;
             gap: 47px;
-            &__img{
+
+            &__img {
                 height: 230px;
-            }   
-            &__text{
+            }
+
+            &__text {
                 max-width: 422px;
             }
         }
     }
-    .birkenstock{
-        &__about{
+
+    .birkenstock {
+        &__about {
             padding-top: 90px;
-            padding-bottom: 90px; 
+            padding-bottom: 90px;
             gap: 46px;
-            &__left{
+
+            &__left {
                 max-width: 422px;
-                h1{
+
+                h1 {
                     margin-bottom: 25px;
                     margin-top: 25px;
-                } 
-                p{
+                }
+
+                p {
                     margin-bottom: 82px;
-                }   
-                &__img{
+                }
+
+                &__img {
                     width: 210px;
                     height: 185px;
                 }
-            } 
-            &__right{
+            }
+
+            &__right {
                 width: 260px;
                 height: 230px;
-            }  
-        } 
+            }
+        }
     }
+
     //ALL BRANDS END
 
     //PRODUCTS PAGE
-     .products{
-        &__select__items{
+    .products {
+        &__select__items {
             display: none;
         }
-        .all{
+
+        .all {
             display: none;
         }
-        &__select__modals{
+
+        &__select__modals {
             display: flex;
         }
-        &__title-500{
+
+        &__title-500 {
             margin-bottom: 35px;
-            @include font(20,20,500);
+            @include font(20, 20, 500);
         }
-        
-            &__card{
-                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-                &__item{
+
+        &__card {
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+            &__item {
+                width: 230px;
+
+                &__img {
                     width: 230px;
-                    &__img{
+                    height: 300px;
+
+                    a {
                         width: 230px;
                         height: 300px;
-                        a{
-                            width: 230px;
-                            height: 300px;
-                        }
                     }
                 }
             }
+        }
     }
 }
+
 // ---------------------------------------------------
-@media (max-width:665px){
+@media (max-width:665px) {
+
     // About US
-    .about-us{
-        .container{
+    .about-us {
+        .container {
             gap: 130px;
         }
-        &__info{
-            &__text{
-               width: 100%;
-               padding: 0 15px;
-               h1{
-                margin-bottom: 25px;
-                @include font(20,27,800);
-               }
+
+        &__info {
+            &__text {
+                width: 100%;
+                padding: 0 15px;
+
+                h1 {
+                    margin-bottom: 25px;
+                    @include font(20, 27, 800);
+                }
             }
         }
     }
+
     // ALL BRANDS
-    .american-vintage{
-        &__info{
+    .american-vintage {
+        &__info {
             flex-direction: column;
             align-items: center;
-            &__left{
+
+            &__left {
                 width: 360px;
                 height: 300px;
             }
-            &__right{
+
+            &__right {
                 width: 100%;
-                h1{
+
+                h1 {
                     margin-bottom: 25px;
                 }
-                img{
+
+                img {
                     width: 210px;
                     height: 185px;
                     margin-left: 50%;
@@ -316,281 +428,369 @@
             }
         }
     }
-    .deha{
-        &__about{
+
+    .deha {
+        &__about {
             flex-direction: column-reverse;
             align-items: center;
-            &__left{
+
+            &__left {
                 width: 100%;
             }
         }
     }
-    .lucy{
-        &__about{
+
+    .lucy {
+        &__about {
             padding: 90px 0;
             gap: 47px;
             flex-direction: column;
-            &__img{
+
+            &__img {
                 width: 280px;
                 height: 260px;
-            }   
-            &__text{
+            }
+
+            &__text {
                 text-align: center;
                 max-width: 100%;
             }
         }
     }
-    .birkenstock{
-        &__about{
+
+    .birkenstock {
+        &__about {
             gap: 46px;
             flex-direction: column-reverse;
             align-items: center;
-            &__left{
+
+            &__left {
                 max-width: 100%;
-                h1{
+
+                h1 {
                     margin-bottom: 25px;
                     margin-top: 25px;
-                } 
-                p{
+                }
+
+                p {
                     margin-bottom: 82px;
-                }   
-                &__img{
+                }
+
+                &__img {
                     width: 210px;
                     height: 185px;
                 }
-            } 
-            &__right{
+            }
+
+            &__right {
                 width: 290px;
                 height: 250px;
-            }  
-        } 
+            }
+        }
     }
+
     //ALL BRANDS END
     // FOOTER==>
-    .footer{
+    .footer {
         padding-top: 51px;
-        &__info{
-            &__title{
-                @include font(20,21,600);
+
+        &__info {
+            &__title {
+                @include font(20, 21, 600);
                 margin-bottom: 30px;
             }
-            &__form{
-                button{
+
+            &__form {
+                button {
                     display: none;
                 }
             }
         }
     }
 }
+
 // -----------------------------------------------
-@media (max-width:600px){
+@media (max-width:600px) {
+
     // About US
-    .about-us{
-        &__info{
-            &__img{
+    .about-us {
+        &__info {
+            &__img {
                 flex-direction: column;
             }
         }
     }
 }
-// ---------------------------------------
-@media(max-width:515px){
-    .products{
-        &__card{
-            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-            &__item{
-                width: 165px;
-                &__img{
-                    width: 165px;
-                    height: 220px;
-                    margin-bottom: 20px;
-                    a{
-                        width: 165px;
-                        height: 220px;
-                    }
+
+// -----------------------------------------------
+@media(max-width:562px) {
+    .about-product {
+        &__info {
+            margin-bottom: 100px;
+            &__img {
+                flex-direction: column-reverse;
+                .total-img {
+                    flex-direction: row;
                 }
-                h2{
-                    @include font(14,19,500);
-                }
-                h6{
-                    @include font(14,20,300);
-                    margin-bottom: 1px;
-                }
-                p{
-                    @include font(13,18,500);   
-                    .product-new-item{
-                        font-weight: 500;  
-                    } 
+                .main-img {
+                    width: 328px;
+                    height: 420px;
                 }
             }
         }
     }
 }
+
+// ---------------------------------------
+@media(max-width:515px) {
+    .products {
+        &__card {
+            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+
+            &__item {
+                width: 165px;
+
+                &__img {
+                    width: 165px;
+                    height: 220px;
+                    margin-bottom: 20px;
+
+                    a {
+                        width: 165px;
+                        height: 220px;
+                    }
+                }
+
+                h2 {
+                    @include font(14, 19, 500);
+                }
+
+                h6 {
+                    @include font(14, 20, 300);
+                    margin-bottom: 1px;
+                }
+
+                p {
+                    @include font(13, 18, 500);
+
+                    .product-new-item {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ----------------------------------------
 @media(max-width:500px) {
+
     // Navbar
-    .container{
+    .container {
         padding: 0 15px;
     }
 
     // About US
-    .about-us{
-        &__hero{
-            &__info{
+    .about-us {
+        &__hero {
+            &__info {
                 padding-top: 165px;
                 padding-bottom: 165px;
-                h1{
-                    @include font(30,36,500);
+
+                h1 {
+                    @include font(30, 36, 500);
                 }
             }
-        } 
-        &__text1{
+        }
+
+        &__text1 {
             padding-top: 70px;
             padding-bottom: 70px;
         }
-        &__img1{
+
+        &__img1 {
             padding-bottom: 84px;
-            &__left{
+
+            &__left {
                 width: 100%;
             }
         }
-        &__info{
+
+        &__info {
             padding-bottom: 70px;
-            &__text{
+
+            &__text {
                 margin-bottom: 70px;
             }
         }
-        &__warning{
+
+        &__warning {
             padding: 58px 15px 58px;
         }
     }
 
     //ALL BRANDS
-    .brands{
-        &__hero{
-            &__info{
-                h1{
-                    @include font(24,26,500);
-                    span{
-                        @include font(14,17,500);
+    .brands {
+        &__hero {
+            &__info {
+                h1 {
+                    @include font(24, 26, 500);
+
+                    span {
+                        @include font(14, 17, 500);
                     }
                 }
             }
         }
     }
-    .american-vintage{
-        &__info{
-            &__left{
+
+    .american-vintage {
+        &__info {
+            &__left {
                 width: 260px;
                 height: 230px;
             }
-            &__right{
-                h1{
+
+            &__right {
+                h1 {
                     margin-bottom: 20px;
-                    @include font(20,27,800);
+                    @include font(20, 27, 800);
                 }
             }
-            
+
         }
     }
-    .deha{
-        &__about{
-            &__left{
-                h1{
-                    @include font(20,27,800);
+
+    .deha {
+        &__about {
+            &__left {
+                h1 {
+                    @include font(20, 27, 800);
                 }
-                p{
+
+                p {
                     margin-top: 20px;
                 }
             }
         }
     }
-    .lucy{
-        &__info{
-            h1{
-                @include font(24,28,500);
-                span{
-                @include font(14,17,500);
+
+    .lucy {
+        &__info {
+            h1 {
+                @include font(24, 28, 500);
+
+                span {
+                    @include font(14, 17, 500);
                 }
             }
         }
-        &__img{
+
+        &__img {
             height: 400px;
         }
     }
-    .birkenstock{
-        &__img{
+
+    .birkenstock {
+        &__img {
             padding: 160px 0;
         }
     }
+
     //ALL BRANDS END
-     //PRODUCTS PAGE
-     .products{
+    //PRODUCTS PAGE
+    .products {
         padding-top: 61.2px;
-        &__select{
-            &__modals{
+
+        &__select {
+            &__modals {
                 gap: 5px;
                 margin-bottom: 25px;
-            }  
+            }
         }
-        .show-more-btn{
+
+        .show-more-btn {
             margin: 50px auto;
         }
-        &__title-500{
+
+        &__title-500 {
             margin-bottom: 30px;
         }
     }
-    // FOOTER==>
-    .footer{
-        &__info{
-            &__title{
-                @include font(20,26,600);
-            }
-            &__list{
-                gap: 20px;
-                padding: 0 10px;
-                a{
-                    @include font(14,19,400);
+
+    // About Product Page
+    .about-product {
+        padding-top: 61.2px;
+        &__info {
+            margin-bottom: 80px;
+            &__img {
+                .main-img {
+                    width: 290px;
+                    height: 390px;
                 }
             }
         }
-        &__author{
-            .container{
-                p{
-                    @include font(8,11,400);
+    }
+
+    // FOOTER==>
+    .footer {
+        &__info {
+            &__title {
+                @include font(20, 26, 600);
+            }
+
+            &__list {
+                gap: 20px;
+                padding: 0 10px;
+
+                a {
+                    @include font(14, 19, 400);
+                }
+            }
+        }
+
+        &__author {
+            .container {
+                p {
+                    @include font(8, 11, 400);
                 }
             }
         }
     }
 }
 
-@media(max-width: 375px){
-    .products{
-        &__card{
+@media(max-width: 375px) {
+    .products {
+        &__card {
             grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-            &__item{
+
+            &__item {
                 width: 245px;
-                &__img{
+
+                &__img {
                     width: 245px;
                     height: 300px;
-                    a{
+
+                    a {
                         width: 245px;
                         height: 300px;
                     }
                 }
             }
         }
-        &.container{
-            .products__menu{
+
+        &.container {
+            .products__menu {
                 left: 10px;
                 right: 10px;
                 top: 160px;
                 width: 95%;
             }
         }
-       
+
     }
-    .filtr-modal{
+
+    .filtr-modal {
         width: 100%;
     }
-} 
+}

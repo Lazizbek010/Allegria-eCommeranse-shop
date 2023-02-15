@@ -21,8 +21,10 @@
                 <div class="about-product__info__setting">
                     <h1 class="about-product__name avenir-800">American vintage</h1>
                     <h6 class="about-product__title">Classic shirt</h6>
-                    <p class="about-product__price"><span class="product-old-item">6100 UAH</span> <span
-                            class="product-new-item">3800 UAH</span></p>
+                    <p class="about-product__price">
+                        <span class="product-old-item">6100 UAH</span> 
+                        <span class="product-new-item">3800 UAH</span>
+                    </p>
                     <div class="about-product-slider"></div>
                     <p class="about-product__size">Размер</p>
                     <ul class="about-product__size-list">
@@ -55,9 +57,11 @@
             </div>
         </div>
         <div class="about-product__container">
-            <div class="similar-products">
-                <product-component v-for="sim in 3" :key="sim"></product-component>
-                <div class="left">
+            <swiper class="similar-products" :slides-per-view="3" :space-between="15">
+                <swiper-slide v-for="sim in 9" :key="sim">
+                    <product-component ></product-component>
+                </swiper-slide>
+                <!-- <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
                         <path stroke="#254A5A" d="M17 1 1 20.5 17 40" />
                     </svg>
@@ -66,8 +70,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
                         <path stroke="#254A5A" d="m1 1 16 19.5L1 40" />
                     </svg>
-                </div>
-            </div>
+                </div> -->
+            </swiper>
         </div>
         <!-- Payment Modal -->
         <div class="overlay" v-show="openPaymentModal" @click="closeModal"></div>
@@ -118,6 +122,8 @@
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
 import ProductComponent from '@/components/ProductComponent.vue';
 import HeartComponent from '@/components/HeartComponent.vue';
 import CloseBtnComponent from '../../components/CloseBtnComponent.vue';

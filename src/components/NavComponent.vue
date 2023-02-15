@@ -17,7 +17,7 @@
                 </div>
                 <ul class="langs">
                     <li class="active nav-text-font">RU</li>
-                    <li class="nav-text-font">UA</li>
+                    <li class="nav-text-font">UZ</li>
                     <li class="nav-text-font">EN</li>
                 </ul>
                 <div class="nav-icons">
