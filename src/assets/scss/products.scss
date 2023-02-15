@@ -39,6 +39,9 @@
                 top: 50%;
                 right: 15px;
                 transform: translateY(-50%) rotate(180deg);
+                &.triangleRotate{
+                    transform: translateY(-50%) rotate(0deg);
+                }
             }
             &__list{
                 position: absolute;
@@ -168,15 +171,16 @@
         .products__menu{
             position: absolute;
             width: 220px;
-            height: 400px;
             top: 110px;
             left: 50px;
+            z-index: 1012;
             .gender{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 border-bottom: 1px solid var(--light-color1);
                 li{
+                    padding: 0 20px;
                     padding-bottom: 10px;
                     text-transform: uppercase;
                     color: var( --silver-color);

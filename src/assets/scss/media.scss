@@ -43,6 +43,14 @@
         &.container{
             .products__menu{
                 display: none;
+                position: fixed;
+                left: calc(100% - 360px);
+                right: 40px;
+                top: 160px;
+                width: 320px;
+                &.block{
+                    display: block;
+                }
             }
         }
     }
@@ -572,5 +580,17 @@
                 }
             }
         }
+        &.container{
+            .products__menu{
+                left: 10px;
+                right: 10px;
+                top: 160px;
+                width: 95%;
+            }
+        }
+       
+    }
+    .filtr-modal{
+        width: 100%;
     }
 } 

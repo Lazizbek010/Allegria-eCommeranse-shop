@@ -5,9 +5,7 @@
             <form class="footer__info__form">
                 <input type="email" placeholder="E-mail">
                 <button>
-                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 4H8.5M8.5 4L6 1M8.5 4L6 7" stroke="#E64926" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" fill="none"><path stroke="#E64926" d="M0 4h8.5m0 0L6 1m2.5 3L6 7"/></svg>
                 </button>
             </form>
             <ul class="footer__info__list">

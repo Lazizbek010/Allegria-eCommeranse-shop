@@ -78,6 +78,26 @@ html {
     border-radius: 6px;
     z-index: 1010;
 }
+.filtr-modal{
+    background: var(--white-color);
+    position: fixed;
+    width: 400px;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1010;
+    h1{
+        width: 100%;
+        display: flex;
+        padding: 28px 40px;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Avenir', sans-serif;
+        text-transform: uppercase;
+        @include font(18, 18, 500);
+        border: 1px solid var(--light-color1);
+    }
+}
 
 // .showModal{
 //     transform: translate(-50%, -50%) scale(1);

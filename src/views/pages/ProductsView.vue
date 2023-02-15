@@ -12,7 +12,7 @@
                 <div class="products__select__items">
                     <div class="select select-font" @click="openList">
                         <span>Размер</span>
-                        <div class="triangle">
+                        <div class="triangle" :class="{'triangleRotate': hidden}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
                         </div>
                         <div class="select__list" :class="{'hidden': hidden}">
@@ -46,12 +46,26 @@
                         </div>
                     </div>
                 </div>
+                <!-- -------------- Modals ---------- -->
                 <div class="products__select__modals">
-                    <div class="select select-font">
+                    <div class="select select-font" @click="openFiltrModal">
                         <span>Фильтры</span>
                         <div class="triangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
                         </div>
+                    </div>
+                    <!-- ========== Filtr Modal =========== -->
+                    <div class="overlay" v-show="filtrModalEvent" @click="closeFiltrModal"></div>
+                    <div class="filtr-modal" v-show="filtrModalEvent">
+                        <h1>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" fill="none"><path stroke="#0F303F" d="M22 7.5H1m0 0 6.5-7M1 7.5l6.5 7"/></svg>
+                            </div>
+                            <span>Фильтр</span>
+                            <div @click="closeFiltrModal">
+                                <svg class="close-filter" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"><path stroke="#0F303F" d="m1 1 20 20M21 1 1 21"/></svg>
+                            </div>
+                        </h1>
                     </div>
                     <div class="select select-font">
                         <span>Сортировать</span>
@@ -76,7 +90,7 @@
             </div>
             <button class="btn show-more-btn">Показать больше</button>
         </div>
-        <div class="products__menu">
+        <div class="products__menu" :class="{'block': filtrModalEvent}">
             <ul class="gender">
                 <li class="description-text active">Женщины</li>
                 <li class="description-text">Мужчины</li>
@@ -119,9 +133,22 @@
 import ProductComponent from '../../components/ProductComponent.vue';
 import { ref } from 'vue';
 const hidden = ref(true)
+const filtrModalEvent = ref(false)
 function openList(){
     hidden.value = !hidden.value
 }
+function openFiltrModal(){
+    filtrModalEvent.value = true
+}
+function closeFiltrModal(){
+    filtrModalEvent.value = false
+}
+//  DOCUMENT ADDEVENTLISTENER 2
+document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape'){
+        filtrModalEvent.value = false;
+    }
+})
 </script>
 
 <style lang="scss" scoped>
