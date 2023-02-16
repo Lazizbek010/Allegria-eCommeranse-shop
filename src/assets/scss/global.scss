@@ -10,10 +10,6 @@
     --line-color: #CECECE;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +38,15 @@ html {
     place-items: center;
     background: var(--white-color);
 }
-
+.swiper-pagination{
+    display: flex;
+    gap: 51px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.swiper-pagination-bullet{
+    color: var(--primary-dark);
+}
 .btn {
     min-width: 200px;
     padding: 15px 0;

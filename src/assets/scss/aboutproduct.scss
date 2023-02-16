@@ -3,6 +3,10 @@
     .about-us__hero__list{
         margin-bottom: 23px;
         width: 100%;
+        overflow-x: auto;
+        a{
+            white-space: nowrap;
+        }
     }
     &__container{
         max-width: 840px;

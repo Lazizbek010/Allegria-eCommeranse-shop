@@ -22,25 +22,31 @@
 
 // ------------------------------------------------
 @media(max-width:1115px) {
-
+    // Home > collection
+    .bg-collection{
+        .collection{
+            background-size: 640px 600px;
+            background-position: center top;
+            .container{
+                flex-direction: column;
+                gap: 287px;
+            } 
+        }
+    }
     // Global
     .hamburger {
         display: block;
     }
-
     .container {
         padding: 0 20px;
     }
-
     // Navbar
     .nav .container .nav-right__menu {
         display: none;
     }
-
     .nav .container .nav-right .langs {
         display: none;
     }
-
     //PRODUCTS PAGE
     .products {
         padding-top: 61.2px;
@@ -66,7 +72,6 @@
             }
         }
     }
-
     // About Product Page
     .about-product {
         padding-top: 61.2px;
@@ -130,7 +135,21 @@
 
 // -------------------------------------------------
 @media(max-width:850px) {
-
+    // HomeView > Hero
+    .hero {
+        height: 462px;
+        &__one{
+            &__info {
+                padding-top: 160px;
+            }
+        } 
+    }
+     // Home > collection
+     .bg-collection{
+        .collection{
+            background-size: 100% 580px;
+        }
+    }
     // About US
     .about-us {
         &__hero {
@@ -382,7 +401,22 @@
 
 // ---------------------------------------------------
 @media (max-width:665px) {
-
+  // Home > collection
+    .bg-collection{
+        .collection{
+            &__info{
+                width: 100%;
+            }    
+            &__img{
+                width: 100%;
+                height: 490px;
+                img{
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+    }
     // About US
     .about-us {
         .container {
@@ -524,6 +558,18 @@
 
 // -----------------------------------------------
 @media(max-width:562px) {
+     // Home > collection
+     .bg-collection{
+        .collection{
+            &__info{
+                h1{
+                    width: 238px;
+                    padding-top: 90px;
+                    @include font(50,51,500);  
+                }
+            }
+        }
+    }
     .about-product {
         &__info {
             margin-bottom: 100px;
@@ -584,12 +630,26 @@
 
 // ----------------------------------------
 @media(max-width:500px) {
-
+    // HomeView > Hero
+    .hero {
+        height: 460px;
+        &__one{
+            &__info {
+                padding-top: 166px;
+                h1{
+                    @include font(30,36,500);
+                }
+            }
+        } 
+    }
+    // HomeView > collection
+    .bg-collection{
+        padding: 100px 0 70px;
+    }    
     // Navbar
     .container {
         padding: 0 15px;
     }
-
     // About US
     .about-us {
         &__hero {
@@ -628,7 +688,6 @@
             padding: 58px 15px 58px;
         }
     }
-
     //ALL BRANDS
     .brands {
         &__hero {
@@ -696,7 +755,6 @@
             padding: 160px 0;
         }
     }
-
     //ALL BRANDS END
     //PRODUCTS PAGE
     .products {
@@ -760,6 +818,20 @@
 }
 
 @media(max-width: 375px) {
+    .bg-collection{
+        .collection{
+            .container{
+                gap: 230px;
+            }
+            &__img{
+                height: 420px;
+                img{
+                    width: 280px;
+                    height: 340px;
+                }
+            }
+        }
+    }
     .products {
         &__card {
             grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));

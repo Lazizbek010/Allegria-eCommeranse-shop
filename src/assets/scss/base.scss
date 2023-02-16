@@ -32,7 +32,6 @@
     &__slide{
         width: 100%;
         height: inherit;
-        border: 2px solid red;
     }
     &-info{
         h1{
@@ -53,6 +52,7 @@
             url('../images/bg-hero-one.png');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: right;
         &__info {
             text-align: center;
             padding-top: 182px;
@@ -157,8 +157,12 @@
                 position: absolute;
                 bottom: 124px;
                 left: 50%;
+                width: 255px;
                 transform: translateX(-50%);
                 text-align: center;
+                font-family: 'Avenir', sans-serif;
+                color: var(--white-color);
+                @include font(14,19,400);
             }
         }
     }

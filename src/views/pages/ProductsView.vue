@@ -10,8 +10,8 @@
             <h1 class="products__title-500">Кофти та піджаки</h1>
             <div class="products__select">
                 <div class="products__select__items">
-                    <div class="select select-font" @click="openList">
-                        <span>Размер</span>
+                    <div class="select select-font" >
+                        <span @click=" hidden = !hidden">Размер</span>
                         <div class="triangle" :class="{'triangleRotate': hidden}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none"><path fill="#0F303F" d="m3.5 0 3.031 4.5H.47L3.5 0Z"/></svg>
                         </div>
@@ -149,9 +149,6 @@ import { ref } from 'vue';
 const hidden = ref(true)
 const filtrModalEvent = ref(false)
 const sortModalEvent = ref(false)
-function openList(){
-    hidden.value = !hidden.value
-}
 function openFiltrModal(){
     filtrModalEvent.value = true
 }

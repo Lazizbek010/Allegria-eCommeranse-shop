@@ -35,6 +35,10 @@ const router = createRouter({
       props: true,
     }
   ],
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+  }
+
 })
 
 export default router
