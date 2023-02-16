@@ -1,0 +1,124 @@
+.com-ques{
+    padding-top: 61.2px;
+    .common__hero__list{
+        margin-bottom: 23px;
+    }
+    &__container{
+        max-width: 870px;
+        margin: 0 auto;
+        &__title{
+            font-family: 'Avenir', sans-serif;
+            text-transform: uppercase;
+            @include font(25,25,500);
+            @include media(802px){
+                text-align: center;
+            }
+            @include media(500px){
+                @include font(20,20,500);
+            }
+        }
+        &__info{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
+            gap: 25px;
+            @include media(802px){
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+            }
+            &__text{
+                width: 470px;
+                @include media(500px){
+                    width: 100%;
+                }
+                h3{
+                    margin-top: 40px;
+                    margin-bottom: 15px;
+                    font-family: 'Avenir', sans-serif;
+                    @include font(14,19,800);
+                    @include media(500px){
+                        margin-top: 25px;
+                    }
+                    @include media(400px){
+                        margin-top: 30px;
+                    }
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        display: block;
+                        padding: 15px 0;
+                        border-top: 1px solid var(--light-color1);
+                        font-family: 'Avenir', sans-serif;
+                        @include font(14,24,800);
+                        position: relative;
+                        span{
+                            display: block;
+                            &:nth-child(1){
+                                margin-bottom: 13px;
+                            }
+                        }
+                        .question-text{
+                            opacity: 0.7;  
+                            @include font(14,19,400);  
+                        }
+                        svg{
+                            position: absolute;
+                            right: 0;
+                            top: 22px;
+                        }
+                    }
+                }
+            }
+            &__form{
+                margin-top: 70px;
+                background: var(--light-color1);
+                width: 300px;
+                height: 440px;
+                padding: 28px 25px;
+                h2{
+                    font-family: 'Avenir', sans-serif;
+                    text-transform: uppercase;
+                    @include font(18,25,500);
+                    margin-bottom: 23px;
+                }
+                input{
+                    width: 100%;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid var(--primary-color);
+                    &::placeholder{
+                        color: var(--primary-dark);
+                        opacity: 0.3;
+                    }
+                }
+                input, textarea, select{
+                    font-family: 'Avenir', sans-serif;
+                    @include font(14,24,400);
+                    background: transparent;
+                    margin-bottom: 15px;
+                }
+                textarea{
+                    width: 100%;
+                    border: 1px solid var(--primary-color);
+                    padding: 5px 0 5px 10px;
+                }
+                label{
+                    opacity: 0.3;
+                }
+                .btn-submit{
+                    width: 100%;
+                    display: block;
+                    padding: 14px 0;
+                    background: var(--tomato-color);
+                    color: var(--light-color1);
+                    font-family: 'Avenir', sans-serif;
+                    text-align: center;
+                    text-transform: uppercase;   
+                    @include font(16,22,500); 
+                }
+            }
+        }
+    }
+}

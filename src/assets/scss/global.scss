@@ -9,6 +9,27 @@
     --black-color: #000000;
     --line-color: #CECECE;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* button */
+::-webkit-scrollbar-button {
+    display: none;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-dark); 
+    border-radius: 25px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var( --primary-color); 
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--white-color);
+    }
 
 * {
     margin: 0;
