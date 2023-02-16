@@ -81,6 +81,7 @@
     background: var(--white-color);
     border-radius: 6px;
     z-index: 1010;
+    border: 1px solid var(--tomato-color);
 }
 // Filter Modal
 .filtr-modal{
@@ -174,7 +175,6 @@
     @include font(40, 48, 500);
     text-transform: uppercase;
     color: var(--light-color1);
-
     span {
         display: block;
         @include font(20, 24, 500);
@@ -214,21 +214,3 @@
     font-family: 'Avenir', sans-serif;
     @include font(14, 19, 500);
 }
-// font-family: 'Tajawal', sans-serif; 1
-// @include font(14,17,500);
-// letter-spacing: 0.1em;
-// text-transform: uppercase;
-// color: var(--light-color1);
-
-// font-family: 'Cormorant Garamond';
-// text-transform: uppercase;
-// color: var(--white-color);
-// @include font(90,92,500);
-// margin-bottom: 15px;
-
-//  font-family: 'Cormorant';
-// font-weight: 500;
-// font-size: 20px;
-// line-height: 24px;
-// text-transform: uppercase;
-// color: var(--light-color1);    
