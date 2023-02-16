@@ -147,19 +147,85 @@
             }
         }
     }
-    .similar-products{
-        background: red;
-        position: relative;
+    .swiper-container{
+        max-width: 840px;
+        margin: 0 auto;
         margin-bottom: 100px;
-        .left, .right{
-            position: absolute;
-            top: 143px;
-        }
-        .left{
-            left: -38px;
-        }
-        .right{
-            right: -38px;
+        position: relative;
+        .similar-products{
+            user-select: none;
+            position: initial !important;
+            .similar-products-slide{
+                width: 270px;
+                @include media(550px){
+                    width: 230px;
+                }
+                #similar-products-slide-item.products__card__item{
+                    width: 270px;
+                    @include media(550px){
+                        width: 100%;
+                    }
+                    .products__card__item__img{
+                        width: 270px;
+                        @include media(550px){
+                            width: 100%;
+                            height: 220px;
+                        }
+                        a{
+                            width: 270px;
+                            @include media(800px){
+                                width: 270px;
+                                height: 300px;
+                            }
+                            @include media(550px){
+                                width: 100%;
+                                height: 220px;
+                            }
+                        }
+                        &-item{
+                            width: 270px;
+                            @include media(800px){
+                                width: 270px;
+                                height: 300px;
+                            }
+                            @include media(550px){
+                                width: 100%;
+                                height: 220px;
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-button-prev, .swiper-button-next{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background:  var(--white-color);
+                color: #254A5A;
+                display: grid;
+                place-items: center;
+                position: absolute !important;
+                top: 143px;
+                @include media(500px){
+                    top: 155px; 
+                }
+                &::after{
+                    font-size: 20px;
+                }
+            }
+            .swiper-button-prev{
+                left: -38px;
+                @include media(930px){
+                    left: -15px;
+                }
+            }
+            .swiper-button-next{
+                right: -38px;
+                @include media(930px){
+                    right: -15px;
+                }
+            }
         }
     }
+    
 }

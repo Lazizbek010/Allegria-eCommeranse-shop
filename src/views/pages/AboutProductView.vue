@@ -57,13 +57,21 @@
             </div>
         </div>
         <div class="about-product__container">
-            <swiper class="similar-products" :slides-per-view="3" :space-between="15">
-                <swiper-slide v-for="sim in 9" :key="sim">
-                    <product-component></product-component>
-                </swiper-slide>
-            </swiper>
+            <div class="swiper-container">
+                <swiper 
+                    class="similar-products" 
+                    :modules="modules"
+                    :spaceBetween="19"
+                    :slidesPerView="'auto'"
+                    navigation
+                    >
+                        <swiper-slide v-for="sim in 9" :key="sim" class="similar-products-slide">
+                            <product-component id="similar-products-slide-item"></product-component>
+                        </swiper-slide>
+                </swiper>
+            </div>
         </div>
-        <!-- Payment Modal -->
+        <!-- Payment Modal Style Alohida scss fileda-->
         <div class="overlay" v-show="openPaymentModal" @click="openPaymentModal = false"></div>
         <div v-show="openPaymentModal" class="modal modal__payment" :class="{ 'showModal': openPaymentModal }">
             <close-btn-component @click="openPaymentModal = false"></close-btn-component>
@@ -110,7 +118,9 @@
 <script setup>
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, A11y } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import ProductComponent from '@/components/ProductComponent.vue';
 import HeartComponent from '@/components/HeartComponent.vue';
 import CloseBtnComponent from '../../components/CloseBtnComponent.vue';
@@ -125,4 +135,5 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
+const modules = [Navigation, A11y];
 </script>
