@@ -181,7 +181,7 @@
             height: 200px;
         }
     }
-     // Home > collection
+    // Home > famous
      .bg-collection{
         .collection{
             background-size: 100% 580px;
@@ -440,6 +440,7 @@
 @media (max-width:665px) {
   // Home > collection
     .bg-collection{
+        padding: 90px 0;
         .collection{
             &__info{
                 width: 100%;
@@ -452,6 +453,11 @@
                     height: 320px;
                 }
             }
+        }
+    }
+    .famous{
+        &__title{
+            margin-bottom: 40px;
         }
     }
     // About US

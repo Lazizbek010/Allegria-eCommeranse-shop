@@ -10,7 +10,7 @@
             </form>
             <ul class="footer__info__list">
                 <li><router-link :to="{name: 'about-us'}">О нас</router-link></li>
-                <li><a href="#">Распространенные вопросы</a></li>
+                <li><router-link :to="{name: 'common-questions'}">Распространенные вопросы</router-link></li>
                 <li><router-link :to="{name: 'brands'}">Бренды</router-link></li>
             </ul>
         </div>

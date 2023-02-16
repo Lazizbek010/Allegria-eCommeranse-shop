@@ -4,6 +4,7 @@ import AboutUsView from '@/views/pages/AboutUsView.vue';
 import BrandsView from '@/views/pages/BrandsView.vue';
 import ProductsView from '@/views/pages/ProductsView.vue';
 import AboutProductsView from '@/views/pages/AboutProductView.vue';
+import CommonQuestionsView from '@/views/pages/CommonQuestionsView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -33,6 +34,11 @@ const router = createRouter({
       name: 'about-product',
       component: AboutProductsView,
       props: true,
+    },
+    {
+      path: '/common-questions',
+      name: 'common-questions',
+      component: CommonQuestionsView,
     }
   ],
   scrollBehavior() {

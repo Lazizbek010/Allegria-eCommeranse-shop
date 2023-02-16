@@ -4,8 +4,8 @@
     font-weight: $fw;
 }
 
-// @mixin media($size){
-//     @media (max-width: $size) {
-//         @content;
-//     }
-// }
+@mixin media($size){
+    @media (max-width: $size) {
+        @content;
+    }
+}

@@ -84,7 +84,7 @@
             </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <div class="container famous__container">
+                <div class="famous__container">
                     <swiper 
                     class="famous__container__card" 
                     :modules="modules2"
@@ -92,19 +92,9 @@
                     :slidesPerView="'auto'"
                     navigation
                     >
-                        <SwiperSlide class="famous__container__card-i" v-for="item in 14" :key="item">
+                        <SwiperSlide class="famous__container__card-slide" v-for="item in 14" :key="item">
                             <FamousItemComponent></FamousItemComponent>
                         </SwiperSlide>
-                        <!-- <SwiperSlide class="famous__card__arrow-left famous__card__arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
-                                <path stroke="#254A5A" d="M17 1 1 20.5 17 40" />
-                            </svg>
-                        </SwiperSlide>
-                        <SwiperSlide class="famous__card__arrow-right famous__card__arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
-                                <path stroke="#254A5A" d="m1 1 16 19.5L1 40" />
-                            </svg>
-                        </SwiperSlide> -->
                     </swiper>
                 </div>
                 <!-- Famous ALLERGIA Logo -->
@@ -165,6 +155,7 @@ import 'swiper/css/scrollbar';
 const modules1 = [Autoplay, Pagination, Scrollbar, A11y]
 const modules2 = [Navigation, Pagination, Scrollbar, A11y]
 
+// Hero Swiper Event
 const mounted = onMounted(() => {
     let dots = document.querySelectorAll('.swiper-pagination-bullet');
     dots.forEach((dot,i) => {
@@ -172,7 +163,7 @@ const mounted = onMounted(() => {
     })
 })
 
-
+// Products Swiper Slide 
 const media = {
     0: {
         spaceBetween: 20
@@ -184,6 +175,7 @@ const media = {
 </script>
 
 <style lang="scss">
+// Hero Swiper
 .swiper{
     .swiper-pagination-bullet{
         background: transparent;
