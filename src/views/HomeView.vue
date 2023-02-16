@@ -64,7 +64,7 @@
             </ul> -->
         </swiper>
         <main>
-            <!-- <section class="bg-collection">
+            <section class="bg-collection">
                 <div class="collection">
                     <div class="container">
                         <div class="collection__info">
@@ -81,31 +81,34 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <swiper 
-                class="famous__card" 
-                :space-between="45" 
-                :modules="modules2"
-                :breakpoints="media"
-                navigation
-                >
-                    <SwiperSlide v-for="item in 14" :key="item">
-                        <FamousItemComponent></FamousItemComponent>
-                    </SwiperSlide>
-                    <div class="famous__card__arrow-left famous__card__arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
-                            <path stroke="#254A5A" d="M17 1 1 20.5 17 40" />
-                        </svg>
-                    </div>
-                    <div class="famous__card__arrow-right famous__card__arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
-                            <path stroke="#254A5A" d="m1 1 16 19.5L1 40" />
-                        </svg>
-                    </div>
-                </swiper>
-                <div class="famous__decoration">
+                <div class="container famous__container">
+                    <swiper 
+                    class="famous__container__card" 
+                    :modules="modules2"
+                    :breakpoints="media"
+                    :slidesPerView="'auto'"
+                    navigation
+                    >
+                        <SwiperSlide class="famous__container__card-i" v-for="item in 14" :key="item">
+                            <FamousItemComponent></FamousItemComponent>
+                        </SwiperSlide>
+                        <!-- <SwiperSlide class="famous__card__arrow-left famous__card__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
+                                <path stroke="#254A5A" d="M17 1 1 20.5 17 40" />
+                            </svg>
+                        </SwiperSlide>
+                        <SwiperSlide class="famous__card__arrow-right famous__card__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="41" fill="none">
+                                <path stroke="#254A5A" d="m1 1 16 19.5L1 40" />
+                            </svg>
+                        </SwiperSlide> -->
+                    </swiper>
+                </div>
+                <!-- Famous ALLERGIA Logo -->
+                <!-- <div class="famous__decoration ">
                     <span class="famous__decoration__left"></span>
                     <span class="famous__decoration__right"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="115" height="14" fill="none">
@@ -119,7 +122,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                </div>
+                </div> -->
             </section>
             <section class="about">
                 <div class="about__shape">
@@ -172,10 +175,10 @@ const mounted = onMounted(() => {
 
 const media = {
     0: {
-        slidesPerView: 'auto'
+        spaceBetween: 20
     },
     1000: {
-        slidesPerView: 4
+        spaceBetween: 45
     }
 }
 </script>

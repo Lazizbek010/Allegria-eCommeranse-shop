@@ -179,65 +179,120 @@
         margin-bottom: 75px;
         text-align: center;
     }
-    &__card{
-        max-width: 1055px;
-        margin: 0 auto;
-        margin-bottom: 95px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 45px;
-        position: relative;
-        &__item{
-            text-align: center;
-            width: 230px;
-            font-family: 'Jost', sans-serif;
-            text-transform: uppercase;
-            &__img{
-                width: 230px;
-                height: 365px;
-                margin-bottom: 29px;
-                img{
-                    width: inherit;
-                    height: inherit;
+        
+        &__container {
+            position: relative;
+             max-width: 1155px;
+            &__card{
+                background: blue;
+                &-i {
+                    width: 230px !important;
+                }
+                &__item{
+                    text-align: center;
+                    width: 230px !important;
+                    font-family: 'Jost', sans-serif;
+                    text-transform: uppercase;
+                    &__img{
+                        width: 230px;
+                        height: 365px;
+                        margin-bottom: 29px;
+                        img{
+                            width: inherit;
+                            height: inherit;
+                        }
+                    }
+                    h2{
+                        @include font(18,26,500);
+                    }
+                    h6{
+                        text-transform: capitalize;   
+                        @include font(16,23,300);
+                        margin-bottom: 6px;
+                    }
+                    p{
+                        @include font(14,20,500);
+                        letter-spacing: 0.045em;
+                        .famous-old-item{
+                            color: var(--line-color);
+                            text-decoration: line-through;
+                        }
+                        .famous-new-item{
+                            color: var(--tomato-color);    
+                        }
+                    }
+                }
+                // .swiper-button-prev{
+                //     width: 90px;
+                //     height: 90px;
+                //     border-radius: 50%;
+                //     background: red;
+                //     color: #254A5A;
+                //     display: grid;
+                //     place-items: center;
+                //     position: absolute !important;
+                //     top: 155px; 
+                //     left: 0;
+                //     z-index: 1900;
+                // }
+                // .swiper-button-next{
+                //     width: 90px;
+                //     height: 90px;
+                //     border-radius: 50%;
+                //     background: red;
+                //     color: #254A5A;
+                //     display: grid;
+                //     place-items: center;
+                //     position: absolute !important;
+                //     top: 155px; 
+                //     right: 0;
+                //     z-index: 900;
+                // }
+                // &__arrow{
+                //     width: 90px;
+                //     height: 90px;
+                //     border-radius: 50%;
+                //     background: var(--white-color);
+                //     display: grid;
+                //     place-items: center;
+                //     position: absolute;
+                //     top: 155px;
+                // }
+                // &__arrow-left{
+                //     left: -70px;
+                // }
+                // &__arrow-right{
+                //     right: -70px;
+                // }
+                user-select: none;
+                position: initial !important;
+                .swiper-button-next,.swiper-button-prev {
+                    display: grid;
+                    place-items: center;
+                    width: 50px !important;
+                    height: 50px !important;
+                    border-radius: 50%;
+                    border: 2px solid red;
+                    z-index: 10;
+                    color: red;
+                    background: #fff !important;
+                    position: absolute !important;
+                    &::after {
+                        font-weight: 700 !important;
+                        font-size: 15px !important;
+                        line-height: 15px !important;
+                    }
+                }
+            
+                .swiper-button-next {
+                    right: 17px;
+                }
+            
+                .swiper-button-prev {
+                    left: 17px;
                 }
             }
-            h2{
-                @include font(18,26,500);
-            }
-            h6{
-                text-transform: capitalize;   
-                @include font(16,23,300);
-                margin-bottom: 6px;
-            }
-            p{
-                @include font(14,20,500);
-                letter-spacing: 0.045em;
-                .famous-old-item{
-                    color: var(--line-color);
-                    text-decoration: line-through;
-                }
-                .famous-new-item{
-                    color: var(--tomato-color);    
-                }
-            }
         }
-        &__arrow{
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: var(--white-color);
-            display: grid;
-            place-items: center;
-            position: absolute;
-            top: 155px;
-        }
-        &__arrow-left{
-            left: -70px;
-        }
-        &__arrow-right{
-            right: -70px;
-        }
-    }
 }
 .famous__decoration{
     text-align: center;
@@ -284,6 +339,7 @@
         margin: 0 auto;
         display: flex;
         gap: 76px;
+        position: relative;
         &__info{
             padding-bottom: 137px;
             padding-top: 132px;
@@ -306,6 +362,12 @@
         }
         &__img{
             transform: translateY(44px);
+            width: 474px;
+            height: 543px;
+            img{
+                width: inherit;
+                height: inherit;
+            }
         }
     }
 }

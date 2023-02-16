@@ -33,6 +33,34 @@
             } 
         }
     }
+    // Home > About
+    .about{
+        margin-bottom: 200px;
+        &__shape{
+            left: 63%; 
+            top: -20px;
+        }
+        &__container{
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+            &__info{
+                padding-top: 140px;
+                padding-bottom: 129px;
+                width: 80%;
+                p{
+                    width: 100%;
+                }
+            }
+            &__img{
+                position: absolute;
+                right: 71px;
+                bottom: -119px;
+                width: 226px;
+                height: 258px;
+            }
+        }
+    }
     // Global
     .hamburger {
         display: block;
@@ -143,6 +171,15 @@
                 padding-top: 160px;
             }
         } 
+    }
+    // Home > About
+    .about{
+        &__shape{
+            left: 60%; 
+            top: -20px;
+            width: 200px;
+            height: 200px;
+        }
     }
      // Home > collection
      .bg-collection{
@@ -545,7 +582,21 @@
 
 // -----------------------------------------------
 @media (max-width:600px) {
-
+    // Home > About
+    .about{
+        &__shape{
+            display: none;
+        }
+        &__container{
+            &__info{
+                padding-top: 70px;  
+                width: 95%;  
+                h1{
+                    @include font(50,45,400); 
+                }
+            }
+        }
+    }
     // About US
     .about-us {
         &__info {

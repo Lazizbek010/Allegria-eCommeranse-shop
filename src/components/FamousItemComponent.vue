@@ -1,6 +1,6 @@
 <template>
-    <div class="famous__card__item">
-        <div class="famous__card__item__img">
+    <div class="famous__container__card__item">
+        <div class="famous__container__card__item__img">
             <img src="@/assets/images/famous-item1.png" alt="">
         </div>
         <h2>REPlay</h2>
