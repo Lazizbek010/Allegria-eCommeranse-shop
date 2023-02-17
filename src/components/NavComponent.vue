@@ -29,9 +29,8 @@
                             </svg>
                         </div>
                         <div class="hamburger" @click="resNav = !resNav">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="9" fill="none">
-                                <path stroke="#0F303F" d="M0 1h20M10 8h10" />
-                            </svg>
+                            <img v-if="resNav" src="@/assets/icons/hamburger-min.svg" alt="" width="20" height="13">
+                            <img v-else src="@/assets/icons/close.svg" alt="" width="20" height="13">
                         </div>
                     </div>
                 </div>
