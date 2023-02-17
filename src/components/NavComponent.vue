@@ -84,7 +84,7 @@
                         </svg>
                     </li>
                 </ul>
-                <ul class="res-nav__bottom">
+                <ul class="res-nav__bottom" v-for="li in 20" :key="li">
                     <li><a href="#">DEHA</a></li>
                     <li><a href="#">American vintage</a></li>
                     <li><a href="#">george gina lucy</a></li>
