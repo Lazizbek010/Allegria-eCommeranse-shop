@@ -6,6 +6,10 @@ import ProductsView from '@/views/pages/ProductsView.vue';
 import AboutProductsView from '@/views/pages/AboutProductView.vue';
 import CommonQuestionsView from '@/views/pages/CommonQuestionsView.vue'
 import RegistrationView from '@/views/pages/RegistrationView.vue'
+import WishlistView from '@/views/pages/WishlistView.vue'
+
+
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -44,6 +48,11 @@ const router = createRouter({
       path: '/registration',
       name: 'registration',
       component: RegistrationView
+    },
+    {
+      path: '/wishlist',
+      name: 'wishlist',
+      component: WishlistView
     }
   ],
   scrollBehavior() {

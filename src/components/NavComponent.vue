@@ -16,14 +16,14 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="nav-heart">
+                        <router-link :to="{name: 'wishlist'}" class="nav-heart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" fill="none">
                                 <path stroke="#254A5A" stroke-linecap="round"
                                     d="M2.318 2.318a4.5 4.5 0 0 1 6.364 0L10.5 4.136l1.818-1.818a4.5 4.5 0 0 1 6.364 6.364L10.5 16.864 2.318 8.682a4.5 4.5 0 0 1 0-6.364Z"
                                     clip-rule="evenodd" />
                             </svg>
                             <div v-if="store.cart > 0" class="heart-abso description-text">{{ store.cart }}</div>
-                        </div>
+                        </router-link>
                         <div class="nav-cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" fill="none">
                                 <path stroke="#254A5A" d="M.5 6.5h15v12H.5zM13 6A5 5 0 0 0 3 6" />
@@ -157,7 +157,7 @@
             </div>
             <div v-else class="modal-forgot__text select-font">
                 Ссылка для восстановления пароля отправлено
-                на katyamaryukha1998@gmail.com .
+                на <br> katyamaryukha1998@gmail.com .
             </div>
         </div>
     </div>

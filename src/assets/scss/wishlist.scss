@@ -1,0 +1,87 @@
+.wishlist{
+    padding-top: 61.8px;
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        &__item{
+            display: flex;
+            &:nth-child(even){
+                justify-content: flex-start;
+            }
+            &:nth-child(odd){
+                justify-content: flex-end;
+            }
+            width: 50%;
+            @include media(850px){
+                padding: 45px 15px;
+            }
+            @include media(750px){
+                width: 100%;
+                &:nth-child(even){
+                    justify-content: center;
+                }
+                &:nth-child(odd){
+                    justify-content: center;
+                }
+            }
+            border: 1px solid var(--light-color1);
+            padding: 46px 40px;
+            &-content{
+                width: 380px;
+                @include media(850px){
+                    width: 344px;
+                }
+                &__close{
+                    text-align: end;
+                    margin-bottom: 10px;
+                }
+                &__info{
+                    display: flex;
+                    gap: 25px;
+                    align-items: center;
+                    @include media(850px){
+                        gap: 19px;
+                    }
+                    @include media(360px){
+                        flex-direction: column;
+                    }
+                    &__img{
+                        width: 140px;
+                        height: 170px;
+                        img{
+                            width: inherit;
+                            height: inherit;
+                            object-fit: cover;
+                        }
+                        @include media(850px){
+                            width: 135px;
+                            height: 165px;
+                        }
+                    }
+                    &__text{
+                        font-family: 'Avenir', sans-serif;
+                        text-transform: uppercase;
+                        @include font(18,25,500);  
+                        h2{
+                            @include font(18,25,500);
+                        }  
+                        h6{
+                            text-transform: capitalize;
+                            @include font(16,22,300);
+                            margin-bottom: 7px;
+                        }
+                        p{
+                            margin-bottom: 13px;
+                        }
+                        #btn-wishlist{
+                            @include font(15,19,500);
+                            @include media(850px){
+                                min-width: 190px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

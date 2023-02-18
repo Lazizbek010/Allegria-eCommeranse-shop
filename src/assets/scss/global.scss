@@ -375,3 +375,16 @@
     font-family: 'Avenir', sans-serif;
     @include font(14, 19, 500);
 }
+// --------------
+.product-price{
+    font-family: 'Jost', serif;
+    letter-spacing: 0.045em;
+    @include font(14,20,700);   
+    .old-price{
+        text-decoration: line-through;
+        color: var(--line-color);
+    }
+    .new-price{
+        color: var(--tomato-color);
+    }
+}
