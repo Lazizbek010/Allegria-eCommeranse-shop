@@ -173,6 +173,9 @@
             top: 110px;
             left: 50px;
             z-index: 1012;
+            @include media(850px){
+                z-index: 2013;
+            }
             .gender{
                 width: 100%;
                 display: flex;

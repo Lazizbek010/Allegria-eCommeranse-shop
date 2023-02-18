@@ -306,32 +306,42 @@
     }
 }
 
-.famous__decoration {
-    text-align: center;
+.famous__dec {
     position: relative;
-
-    &__left {
-        display: block;
+    width: 100%;
+    margin: 81px 0 45px;
+    height: 20px;
+    &__left, &__right, &__img{
         position: absolute;
         top: 50%;
+    }
+    &__left {
         transform: translateY(-50%);
-        left: 27px;
-        max-width: 640px;
-        width: 100%;
+        left: 0;
+        width: calc(50% - 80px);
         height: 1px;
         background: var(--light-color1);
     }
-
     &__right {
-        position: absolute;
-        top: 50%;
         transform: translateY(-50%);
-        right: 27px;
-        display: block;
-        max-width: 640px;
-        width: 100%;
+        right: 0;
+        width: calc(50% - 80px);
         height: 1px;
         background: var(--light-color1);
+    }
+    &__img{
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 115px;
+        height: 14px;
+        img{
+            width: inherit;
+            height: inherit;
+        }
+        @include media(500px){
+            width: 96px;
+            height: 12px;
+        }
     }
 }
 

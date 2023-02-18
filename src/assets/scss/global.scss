@@ -43,7 +43,10 @@
     outline: none;
     color: var(--primary-dark);
 }
-
+*::selection{
+    background: var(--tomato-color);
+    color: var(--white-color);
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -85,14 +88,15 @@
 .hamburger{
     display: none;
 }
+// ============ MODALS STYLE ========
 .overlay{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background:  rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    background:  rgba(0, 0, 0, 0.6);
+    z-index: 2011;
 }
 .modal{
     position: fixed;
@@ -101,8 +105,12 @@
     transform: translate(-50%, -50%);
     background: var(--white-color);
     border-radius: 6px;
-    z-index: 1010;
-    border: 1px solid var(--tomato-color);
+    z-index: 2012;
+}
+.close-modal{
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 // Filter Modal
 .filtr-modal{
@@ -112,7 +120,7 @@
     top: 0;
     right: 0;
     height: 100vh;
-    z-index: 1010;
+    z-index: 2012;
     h1{
         width: 100%;
         display: flex;
@@ -133,7 +141,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1012;
+    z-index: 2012;
     background: var(--white-color);
     h1{
         padding: 40px 0;
@@ -161,9 +169,132 @@
         }
     }
 }
-// .showModal{
-//     transform: translate(-50%, -50%) scale(1);
-// }
+// Count Modal
+.count-modal{
+    padding: 52px 80px;
+    text-align: center;
+    @include media(560px){
+        width: 100%;
+        height: 100vh;
+        padding: 200px 15px;
+    }
+    h1{
+        @include font(25,34,500);
+        span{
+            color: var(--tomato-color);
+        }
+        margin-bottom: 22px;
+    }
+    input{
+        width: 250px;
+        margin: 0 auto;
+        padding: 5px;
+        margin-bottom: 15px;
+        text-align: center;
+        border-bottom: 1px solid var(--primary-dark);
+        @include media(560px){
+            width: 90%;
+        }
+    }
+    p{
+        width: 325px;
+        margin: 0 auto;
+        margin-bottom: 22px;
+        color: var(--primary-dark);
+        @include media(560px){
+            width: 90%;
+        }
+    }
+    &__btn{
+        width: 250px;   
+    }
+}
+// USER ENTRANCE MODAL
+.modal-enrtance{
+    width: 425px;
+    height: 425px;
+    padding: 77px 88px;
+    @include media(560px){
+        width: 100%;
+        height: 100vh;
+        padding: 203px 15px;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__form{
+        input{
+            width: 100%;
+            border-bottom: 1px solid var(--primary-color);
+            padding: 5px;
+            margin-bottom: 20px;
+            &::placeholder{
+                color: var(--silver-color);
+            }
+        }
+        .user-password{
+            border-bottom: 1px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 5px;
+            input{
+                padding: 0;
+                border: none;
+                margin-bottom: 0;
+            }
+        }
+        button{
+            width: 100%;
+            margin-bottom: 35px;
+            font-weight: 800;
+        }
+        .user-setting{
+            text-align: center;
+            color: var(--tomato-color); 
+            span{
+                font-family: 'Avenir', sans-serif;
+                color: var(--tomato-color);    
+                @include font(12,16,500);
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+                a{
+                    color: var(--tomato-color);    
+                }
+            }
+        }
+    }
+}
+// USER FORGOT MODAL
+.modal-forgot{
+    &.padding-email{
+        padding: 130px 46px 88px;
+        h1{
+            padding: 0 42px;
+            text-align: center;
+        }
+    }
+    input{
+        width: 100%;
+        border-bottom: 1px solid var(--primary-color);
+        padding: 5px;
+        margin-bottom: 20px;
+        &::placeholder{
+            color: var(--silver-color);
+        }
+    }
+    button{
+        width: 100%;
+        font-weight: 800;
+    }
+    .modal-forgot__text{
+        text-align: center;
+    }
+}
 .close{
     position: absolute;
     background: transparent;
@@ -202,7 +333,13 @@
         color: var(--light-color1);
     }
 }
-
+.user-modal-title{
+    font-family: 'Avenir', sans-serif;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    @include font(25,34,500);
+}
 .avenir-800 {
     font-family: 'Avenir', sans-serif;
     @include font(25, 34, 800);

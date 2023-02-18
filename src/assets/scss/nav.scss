@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1009;
+    z-index: 2009;
     border-bottom: 1px solid var(--light-color1);
     box-shadow: 0 1px 10px #e5e2e2;
     .container{
@@ -112,6 +112,8 @@
         }
     }
 }
+
+// Responsive Navbar
 .res-nav{
     &.hidden{
         display: none;

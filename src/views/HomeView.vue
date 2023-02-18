@@ -98,21 +98,13 @@
                     </swiper>
                 </div>
                 <!-- Famous ALLERGIA Logo -->
-                <!-- <div class="famous__decoration ">
-                    <span class="famous__decoration__left"></span>
-                    <span class="famous__decoration__right"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="115" height="14" fill="none">
-                        <g fill="#EAE9E8" clip-path="url(#a)">
-                            <path
-                                d="m9.288 13.812-.9-2.415H2.445l-.967 2.415H0L5.556 0l5.233 13.812h-1.5ZM5.491 3.463l-2.638 6.799h5.105l-2.467-6.8ZM18.446 13.812V.484h1.436v12.15h4.226v1.178h-5.662ZM32.019 13.812V.484h1.435v12.15h4.226v1.178H32.02ZM45.595 13.812V.484h6.733V1.72H47.03V4.89h3.605v1.194H47.03v6.568h5.535v1.156h-6.97v.004ZM67.28 14c-3.838-.021-7.272-2.098-7.272-6.55 0-4.179 3.347-7.176 7.784-7.176.236 0 .472 0 .708.021v1.238a9.41 9.41 0 0 0-.77-.043c-3.474.021-6.327 2.14-6.327 5.96 0 3.776 3.067 5.394 5.833 5.394.192 0 .385 0 .578-.021V5.497h-2.94V4.406h4.288v9.423c-.618.107-1.261.17-1.883.17ZM84.417 10.6l2.166 3.212h-1.588l-1.78-2.707a6.43 6.43 0 0 1-2.276.42 6.91 6.91 0 0 1-1.308-.124v2.414h-1.417V.484h2.53c4.44 0 6.177 2.56 6.177 5.707.003 1.575-.596 3.232-2.504 4.41Zm-3.39-8.964H79.63v8.563a4.3 4.3 0 0 0 1.374.21c.538 0 1.18-.086 1.566-.274L81.35 8.35l1.094-.673 1.286 1.91c1.072-.63 1.864-1.785 1.864-3.232 0-3.396-2.27-4.72-4.567-4.72ZM95.29 13.812V.484h1.416v13.328H95.29ZM113.499 13.812l-.901-2.415h-5.941l-.967 2.415h-1.479L109.767 0 115 13.812h-1.501Zm-3.797-10.348-2.638 6.799h5.105l-2.467-6.8Z" />
-                        </g>
-                        <defs>
-                            <clipPath id="a">
-                                <path fill="#fff" d="M0 0h115v14H0z" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div> -->
+                <div class="famous__dec">
+                    <div class="famous__dec__left"></div>
+                    <div class="famous__dec__right"></div>
+                    <div class="famous__dec__img">
+                        <img src="@/assets/images/famous-dec.svg" alt="">
+                    </div>
+                </div>
             </section>
             <section class="about">
                 <div class="about__shape">
@@ -152,8 +144,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-const modules1 = [Autoplay, Pagination, Scrollbar, A11y]
-const modules2 = [Navigation, Pagination, Scrollbar, A11y]
+const modules1 = [Autoplay, Pagination, Scrollbar, A11y];
+const modules2 = [Navigation, Pagination, Scrollbar, A11y];
 
 // Hero Swiper Event
 const mounted = onMounted(() => {
