@@ -111,6 +111,9 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    @include media(560px){
+        top: 60px;
+    }
 }
 // Filter Modal
 .filtr-modal{
