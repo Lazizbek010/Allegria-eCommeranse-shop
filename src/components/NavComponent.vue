@@ -24,11 +24,11 @@
                             </svg>
                             <div v-if="store.cart > 0" class="heart-abso description-text">{{ store.cart }}</div>
                         </router-link>
-                        <div class="nav-cart">
+                        <router-link :to="{name: 'cart'}" class="nav-cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" fill="none">
                                 <path stroke="#254A5A" d="M.5 6.5h15v12H.5zM13 6A5 5 0 0 0 3 6" />
                             </svg>
-                        </div>
+                        </router-link>
                         <div class="hamburger" @click="resNav = !resNav">
                             <img v-if="resNav" src="@/assets/icons/hamburger-min.svg" alt="" width="20" height="13">
                             <img v-else src="@/assets/icons/close.svg" alt="" width="20" height="13">
@@ -178,8 +178,8 @@ function openForgotModal(){
     forgotModal.value = true
     submitRestore.value = true
 }
-function toRegist(){
+// function toRegist(){
 
-}
+// }
 </script>
 

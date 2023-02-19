@@ -30,7 +30,6 @@
                 align-items: center;
                 gap: 20px;
                 a, div{
-                    display: block;
                     position: relative;
                     .heart-abso{
                         position: absolute;
@@ -44,6 +43,9 @@
                         background: var(--tomato-color);
                         font-size: 11px;
                     }
+                }
+                a{
+                    display: block;
                 }
                 .hamburger{
                     img{

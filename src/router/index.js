@@ -7,6 +7,7 @@ import AboutProductsView from '@/views/pages/AboutProductView.vue';
 import CommonQuestionsView from '@/views/pages/CommonQuestionsView.vue'
 import RegistrationView from '@/views/pages/RegistrationView.vue'
 import WishlistView from '@/views/pages/WishlistView.vue'
+import CartView from '@/views/pages/CartView.vue'
 
 
 
@@ -53,6 +54,11 @@ const router = createRouter({
       path: '/wishlist',
       name: 'wishlist',
       component: WishlistView
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: CartView
     }
   ],
   scrollBehavior() {
