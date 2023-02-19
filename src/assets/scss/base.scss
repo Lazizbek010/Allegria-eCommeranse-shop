@@ -48,6 +48,7 @@
         }
 
         a {
+            display: inline-block;
             letter-spacing: 0.045em;
             color: var(--tomato-color);
         }
@@ -75,6 +76,7 @@
             }
 
             a {
+                display: inline-block;
                 color: var(--light-color1);
             }
         }
@@ -161,6 +163,7 @@
             }
 
             a {
+                display: inline-block;
                 letter-spacing: 0.045em;
                 color: var(--light-color1);
             }

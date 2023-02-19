@@ -8,18 +8,18 @@
         :pagination="{ clickable: true }"
         :centeredSlides="true" 
         :autoplay='{
-            "delay": 3500,
+            "delay": 4000,
             "disableOnInteraction": false
             }'
         >
             <swiper-slide class="hero__slide hero__one">
                 <div class="container">
-                    <div class="hero__one__info hero-info">
+                    <div class="hero__one__info hero-info animate__animated animate__zoomInDown animate__slow">
                         <h1 class="cormorant-500">
                             <span>бренд</span>
                             american vintage
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page animate__animated animate__bounce animate__delay-2s">Смотреть коллекцию</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -30,7 +30,7 @@
                             <span>бренд</span>
                             george gina <br>lucy
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">Смотреть коллекцию</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -41,7 +41,7 @@
                             <span>бренд</span>
                             DEHA
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">Смотреть коллекцию</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -52,7 +52,7 @@
                             <span>бренд</span>
                             birkenstock
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">Смотреть коллекцию</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -67,13 +67,13 @@
             <section class="bg-collection">
                 <div class="collection">
                     <div class="container">
-                        <div class="collection__info">
+                        <div class="collection__info" data-aos="zoom-in" data-aos-duration="1000">
                             <h1>new arrival</h1>
                             <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
                                 ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip</p>
-                            <a class="nav-text-font" href="#">Смотреть коллекцию</a>
+                            <a class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</a>
                         </div>
-                        <div class="collection__img">
+                        <div class="collection__img" data-aos="zoom-in-left" data-aos-duration="1000">
                             <img src="@/assets/images/collection-img.png" alt="">
                             <p class="collection__img__abso collection__text">
                                 Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip
@@ -84,7 +84,7 @@
             </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <div class="famous__container">
+                <div class="famous__container" data-aos="fade-up" data-aos-duration="1500">
                     <swiper 
                     class="famous__container__card" 
                     :modules="modules2"
@@ -118,7 +118,7 @@
                     </svg>
                 </div>
                 <div class="about__container">
-                    <div class="about__container__info">
+                    <div class="about__container__info" data-aos="fade-up-right" data-aos-duration="1500">
                         <h1><span>О</span>нас</h1>
                         <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
                             ipsumLoreLorem ipsumLorem
@@ -126,7 +126,7 @@
                             ipsumLorem ipsumLorem ipsumLorem ipsumipLorem ipsumLoremLorem ipsumLorem ipsumLorem
                             ipsumLorem ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem </p>
                     </div>
-                    <div class="about__container__img">
+                    <div class="about__container__img animate__animated animate__delay-5s animate__zoomIn">
                         <img src="@/assets/images/about-img.png" alt="about-img">
                     </div>
                 </div>
@@ -144,6 +144,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import AOS from "aos";
+
+
 const modules1 = [Autoplay, Pagination, Scrollbar, A11y];
 const modules2 = [Navigation, Pagination, Scrollbar, A11y];
 
@@ -164,8 +167,13 @@ const media = {
         spaceBetween: 45
     }
 }
-</script>
 
+
+
+onMounted(() => {
+    AOS.init();
+})
+</script>
 <style lang="scss">
 // Hero Swiper
 .swiper{

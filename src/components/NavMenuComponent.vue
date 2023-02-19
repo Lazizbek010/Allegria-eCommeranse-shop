@@ -2,8 +2,8 @@
     <div class="nav-right__com">
         <div class="nav-right__menu">
             <ul>
-                <li><a class="active nav-text-font" href="#">Женщины</a></li>
-                <li><a class="nav-text-font" href="#">Мужчины</a></li>
+                <li><a class="active nav-text-font links-page" href="#">Женщины</a></li>
+                <li><a class="nav-text-font links-page" href="#">Мужчины</a></li>
             </ul>
             <div class="search">
                 <span class="nav-text-font">поиск</span>

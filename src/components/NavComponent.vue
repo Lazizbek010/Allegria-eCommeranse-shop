@@ -3,9 +3,9 @@
         <!-- NAVBAR -->
         <div class="nav">
             <div class="container">
-                <div class="logo">
+                <router-link :to="{name: 'home'}" class="logo links-page">
                     <img src="@/assets/images/logo.svg" alt="logo">
-                </div>
+                </router-link>
                 <div class="nav-right">
                     <nav-menu-component class="hidden"></nav-menu-component>
                     <div class="nav-icons">

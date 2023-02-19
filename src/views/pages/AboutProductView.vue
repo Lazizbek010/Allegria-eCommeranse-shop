@@ -1,10 +1,10 @@
 <template>
     <div class="about-product container">
         <ul class="about-us__hero__list">
-            <li><router-link :to="{ name: 'home' }">Главная</router-link></li>
-            <li><a href="#">Женщины</a></li>
-            <li><a href="#">Одежда</a></li>
-            <li><a href="#">Кофты и пиджаки</a></li>
+            <li><router-link class="links-page" :to="{ name: 'home' }">Главная</router-link></li>
+            <li><a class="links-page" href="#">Женщины</a></li>
+            <li><a class="links-page" href="#">Одежда</a></li>
+            <li><a class="links-page" href="#">Кофты и пиджаки</a></li>
             <li><router-link class="active" :to="{ name: 'about-product' }">American vintage</router-link></li>
         </ul>
         <div class="about-product__container">
@@ -48,8 +48,8 @@
                         <button class="btn buy-btn">купить в один клик</button>
                     </div>
                     <div class="selection2">
-                        <button @click="openPaymentModal = true" class="select-font">Оплата и доставка</button>
-                        <button @click="openReturnModal = true" class="select-font">Возврат и обмен</button>
+                        <button @click="openPaymentModal = true" class="select-font links-page">Оплата и доставка</button>
+                        <button @click="openReturnModal = true" class="select-font links-page">Возврат и обмен</button>
                     </div>
                     <h4 class="about-product__desc-500">ИНФОРМАЦИЯ О ТОВАРЕ</h4>
                     <p class="about-product__desc-title select-font">Lorem ipsum dolor sit amet.</p>

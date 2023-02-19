@@ -1,9 +1,9 @@
 <template>
     <div class="products container">
         <ul class="products__list about-us__hero__list">
-            <li><router-link :to="{ name: 'home' }">Главная</router-link></li>
-            <li><a href="#">Женщины</a></li>
-            <li><a href="#">Одежда</a></li>
+            <li><router-link class="links-page" :to="{ name: 'home' }">Главная</router-link></li>
+            <li><a class="links-page" href="#">Женщины</a></li>
+            <li><a class="links-page" href="#">Одежда</a></li>
             <li><a class="active" href="#">Кофты и пиджаки</a></li>
         </ul>
         <div class="products__container">

@@ -135,6 +135,10 @@
                 }
                 .order-btn{
                     min-width: 250px;
+                    margin-bottom: 30px;
+                    @include media(560px){
+                        min-width: 280px;
+                    }
                 }
             }
             &__card{

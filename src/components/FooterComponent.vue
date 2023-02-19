@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <div class="footer__info">
+        <div class="footer__info" data-aos="zoom-in" data-aos-duration="1500">
             <h1 class="footer__info__title">Будьте в курсе событий</h1>
             <div class="footer__info__form">
                 <input type="email" placeholder="E-mail">
@@ -9,9 +9,9 @@
                 </button>
             </div>
             <ul class="footer__info__list">
-                <li><router-link :to="{name: 'about-us'}">О нас</router-link></li>
-                <li><router-link :to="{name: 'common-questions'}">Распространенные вопросы</router-link></li>
-                <li><router-link :to="{name: 'brands'}">Бренды</router-link></li>
+                <li><router-link class="links-page" :to="{name: 'about-us'}">О нас</router-link></li>
+                <li><router-link class="links-page" :to="{name: 'common-questions'}">Распространенные вопросы</router-link></li>
+                <li><router-link class="links-page" :to="{name: 'brands'}">Бренды</router-link></li>
             </ul>
         </div>
         <div class="footer__author">
