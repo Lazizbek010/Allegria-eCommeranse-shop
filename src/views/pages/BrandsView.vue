@@ -3,11 +3,11 @@
         <section class="brands__hero">
             <div class="container">
                 <ul class="brands__hero__list about-us__hero__list">
-                    <li><router-link :to="{ name: 'home' }">Главная</router-link></li>
+                    <li><router-link class="links-page" :to="{ name: 'home' }">Главная</router-link></li>
                     <li><router-link class="active" :to="{ name: 'brands' }">Бренды</router-link></li>
                 </ul>
-                <div class="brands__hero__info">
-                    <h1 class="cormorant-500"><span>бренд</span>american vintage</h1>
+                <div class="brands__hero__info animate__animated animate__zoomInUp animate__slow">
+                    <h1 class="cormorant-500 animate__animated animate__delay-2s animate__bounce"><span>бренд</span>american vintage</h1>
                     <p class="description-text">American Vintage - модная торговая марка по производству трикотажной
                         одежды для мужчин и женщин. </p>
                 </div>
@@ -16,10 +16,10 @@
         <section class="american-vintage">
             <div class="container">
                 <div class="american-vintage__info">
-                    <div class="american-vintage__info__left">
+                    <div class="american-vintage__info__left" data-aos="fade-right" data-aos-duration="2000">
                         <img src="@/assets/images/about-us-info-img2.png" alt="">
                     </div>
-                    <div class="american-vintage__info__right">
+                    <div class="american-vintage__info__right" data-aos="fade-left" data-aos-duration="2000">
                         <h1 class="avenir-800">American vintage</h1>
                         <p class="description-text">Продукция также включает немногочисленные аксессуары в виде шарфов,
                             ремней, шапок, а также
@@ -43,7 +43,7 @@
         </section>
         <section class="deha">
             <div class="deha__hero">
-                <div class="deha__hero__text">
+                <div class="deha__hero__text" data-aos="zoom-in-up" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>DEHA</h1>
                     <p class="description-text">Бренд DEHA принадлежит компании Meeting Group SpA, которая является
                         лидером на итальянском рынке спортивной одежды премиум-класса. </p>
@@ -51,7 +51,7 @@
             </div>
             <div class="container">
                 <div class="deha__about">
-                    <div class="deha__about__left">
+                    <div class="deha__about__left" data-aos="fade-right" data-aos-duration="2000">
                         <h1 class="avenir-800">DeHA</h1>
                         <p class="description-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi esse
                             sed
@@ -78,14 +78,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deha__about__right">
+                    <div class="deha__about__right" data-aos="fade-left" data-aos-duration="2000">
                         <img src="@/assets/images/deha-about-img01.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
         <section class="lucy">
-            <div class="lucy__info">
+            <div class="lucy__info" data-aos="flip-up" data-aos-duration="2000">
                 <h1 class="cormorant-500"><span>бренд</span>george gina & lucy</h1>
                 <p class="description-text">Бренд основан в 2004 году недалеко от Франкфурта, когда супруги Николь Бейли
                     и Николас Нойхаус вместе
@@ -95,10 +95,10 @@
             <div class="lucy__img"></div>
             <div class="container">
                 <div class="lucy__about">
-                <div class="lucy__about__img">
+                <div class="lucy__about__img" data-aos="fade-up-right" data-aos-duration="2000">
                     <img src="@/assets/images/about-us-info-img1.png" alt="">
                 </div>
-                <div class="lucy__about__text">
+                <div class="lucy__about__text" data-aos="fade-up-left" data-aos-duration="2000">
                     <h1 class="avenir-800">george gina & lucy</h1>
                     <p class="description-text">Популярность и любовь дизайнеры заслужили тем, что соединили в своих
                         творениях оригинальность,
@@ -115,14 +115,14 @@
         </section>
         <section class="birkenstock">
             <div class="birkenstock__img">
-                <div class="birkenstock__img__info container">
+                <div class="birkenstock__img__info container" data-aos="flip-right" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>birkenstock</h1>
                     <p class="description-text">BIRKENSTOCK — известная немецкая компания, занимающаяся производством ортопедической обуви.</p>
                 </div>
             </div>
             <div class="container">
                 <div class="birkenstock__about">
-                <div class="birkenstock__about__left">
+                <div class="birkenstock__about__left" data-aos="fade-right" data-aos-duration="2000">
                     <h1 class="avenir-800">birkenstock</h1>
                     <p class="description-text">Свою славу она заслужила благодаря удобству, экологичности материалов и поддержанию здоровья ног.
                         Знаменитая мягкая ортопедическая стелька фирмы BIRKENSTOCK позволяет долгое время находиться в
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="birkenstock__about__right">
+                <div class="birkenstock__about__right" data-aos="fade-left" data-aos-duration="2000">
                     <img src="@/assets/images/bg-hero-four2.png" alt="">
                 </div>
             </div>
@@ -151,6 +151,10 @@
 </template>
 
 <script setup>
-
+import { onMounted } from 'vue';
+import AOS from "aos";
+onMounted(() => {
+    AOS.init();
+})
 </script>
 

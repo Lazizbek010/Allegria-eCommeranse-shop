@@ -71,7 +71,7 @@
                             <h1>new arrival</h1>
                             <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
                                 ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip</p>
-                            <a class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</a>
+                            <router-link :to="{name: 'products'}" class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</router-link>
                         </div>
                         <div class="collection__img" data-aos="zoom-in-left" data-aos-duration="1000">
                             <img src="@/assets/images/collection-img.png" alt="">
@@ -84,7 +84,7 @@
             </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <div class="famous__container" data-aos="fade-up" data-aos-duration="1500">
+                <div class="famous__container" data-aos="fade-up" data-aos-duration="2000">
                     <swiper 
                     class="famous__container__card" 
                     :modules="modules2"
@@ -117,8 +117,8 @@
                             stroke="#FFFFFF" />
                     </svg>
                 </div>
-                <div class="about__container">
-                    <div class="about__container__info" data-aos="fade-up-right" data-aos-duration="1500">
+                <div class="about__container" data-aos="fade-up-right" data-aos-duration="1500">
+                    <div class="about__container__info">
                         <h1><span>О</span>нас</h1>
                         <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
                             ipsumLoreLorem ipsumLorem
@@ -173,6 +173,7 @@ const media = {
 onMounted(() => {
     AOS.init();
 })
+
 </script>
 <style lang="scss">
 // Hero Swiper

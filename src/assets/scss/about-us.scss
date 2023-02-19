@@ -55,7 +55,11 @@
         .container{
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
+            gap: 191px;
+            @include media(1210px){
+                gap: 70px;
+            }
         }
         &__left{
             width: 550px;
@@ -63,6 +67,10 @@
             img{
                 width: inherit;
                 height: inherit;
+            }
+            @include media(1060px){
+                width: 520px;
+                height: 520px;
             }
         }
         &__right{

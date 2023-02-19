@@ -2,13 +2,15 @@
     <div class="com-ques">
         <div class="container">
             <ul class="common__hero__list about-us__hero__list">
-            <li><router-link :to="{ name: 'home' }">Главная</router-link></li>
+            <li><router-link class="links-page" :to="{ name: 'home' }">Главная</router-link></li>
             <li><router-link class="active" :to="{ name: 'common-questions' }">Популярные вопросы</router-link></li>
         </ul>
         <div class="com-ques__container">
-            <h1 class="com-ques__container__title">Популярные вопросы</h1>
+            <h1 class="com-ques__container__title animate__animated animate__lightSpeedInLeft animate__slow">Популярные вопросы</h1>
             <div class="com-ques__container__info">
-                <div class="com-ques__container__info__text">
+                <div class="com-ques__container__info__text"
+                data-aos="zoom-in-right"
+                data-aos-duration="1000">
                     <h3>ПОКУПКИ</h3>
                     <ul>
                         <li>
@@ -29,7 +31,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="com-ques__container__info__form">
+                <div class="com-ques__container__info__form"
+                data-aos="fade-down"
+                data-aos-duration="3000">
                     <form action="#">
                         <h2>Есть вопросы или предложения? НАПИШИТЕ НАМ</h2>
                         <input required type="text" placeholder="Имя" name="name" id="name">
@@ -50,7 +54,11 @@
 </template>
 
 <script setup>
-
+import { onMounted } from 'vue';
+import AOS from "aos";
+onMounted(() => {
+    AOS.init();
+})
 </script>
 
 <style lang="scss" scoped></style>

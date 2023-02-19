@@ -7,7 +7,7 @@
             <li><a class="active" href="#">Кофты и пиджаки</a></li>
         </ul>
         <div class="products__container">
-            <h1 class="products__title-500">Кофти та піджаки</h1>
+            <h1 class="products__title-500 animate__bounce animate__slow animate__animated">Кофти та піджаки</h1>
             <div class="products__select">
                 <div class="products__select__items">
                     <div class="select select-font">
@@ -108,7 +108,12 @@
                 </div>
             </div>
             <div class="products__card">
-                <product-component v-for="item in 15" :key="item"></product-component>
+                <product-component
+                 v-for="(item, i) in 15" :key="i"
+                 data-aos="fade-up"
+                data-aos-duration="1500" 
+                >
+            </product-component>
             </div>
             <button class="btn show-more-btn">Показать больше</button>
         </div>
@@ -153,7 +158,9 @@
 
 <script setup>
 import ProductComponent from '../../components/ProductComponent.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import AOS from "aos";
+
 const hidden = ref(false)
 const filtrModalEvent = ref(false)
 const sortModalEvent = ref(false)
@@ -173,6 +180,9 @@ document.addEventListener('keydown', (e)=>{
         filtrModalEvent.value = false;
         sortModalEvent.value = false;
     }
+})
+onMounted(() => {
+    AOS.init();
 })
 </script>
 

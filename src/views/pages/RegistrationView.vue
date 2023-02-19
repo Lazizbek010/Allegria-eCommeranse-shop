@@ -1,7 +1,9 @@
 <template>
     <div class="registrsation">
-        <h1 class="registrsation__title user-modal-title">Регистрация</h1>
-        <form action="#" class="registrsation__form">
+        <h1 class="registrsation__title user-modal-title animate__animated animate__slow animate__shakeX">Регистрация</h1>
+        <form action="#" class="registrsation__form" 
+        data-aos="zoom-in"
+        data-aos-duration="1500">
             <input class="select-font" type="text" placeholder="Имя">
             <input class="select-font" type="text" placeholder="Фамилия">
             <input class="select-font" type="tel" placeholder="Телефон">
@@ -39,9 +41,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import AOS from "aos";
+
 const showPassword = ref(true)
 const showPassword2 = ref(true)
+
+onMounted(() => {
+    AOS.init();
+})
 
 </script>
 

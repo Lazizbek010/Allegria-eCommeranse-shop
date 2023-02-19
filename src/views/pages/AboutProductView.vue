@@ -4,12 +4,12 @@
             <li><router-link class="links-page" :to="{ name: 'home' }">Главная</router-link></li>
             <li><a class="links-page" href="#">Женщины</a></li>
             <li><a class="links-page" href="#">Одежда</a></li>
-            <li><a class="links-page" href="#">Кофты и пиджаки</a></li>
+            <li><router-link class="links-page" :to="{ name: 'products' }">Кофты и пиджаки</router-link></li>
             <li><router-link class="active" :to="{ name: 'about-product' }">American vintage</router-link></li>
         </ul>
         <div class="about-product__container">
             <div class="about-product__info">
-                <div class="about-product__info__img">
+                <div class="about-product__info__img" data-aos="fade-right" data-aos-duration="1500">
                     <div class="total-img">
                         <img v-for="image in 3" :key="image" src="@/assets/images/famous-item1.png" alt="">
                     </div>
@@ -18,8 +18,8 @@
                         <heart-component></heart-component>
                     </div>
                 </div>
-                <div class="about-product__info__setting">
-                    <h1 class="about-product__name avenir-800">American vintage</h1>
+                <div class="about-product__info__setting" data-aos-duration="1500" data-aos="zoom-in">
+                    <h1 class="about-product__name avenir-800 animate__rubberBand animate__animated animate__slow animate__delay-2s">American vintage</h1>
                     <h6 class="about-product__title">Classic shirt</h6>
                     <p class="about-product__price">
                         <span class="product-old-item">6100 UAH</span>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="about-product__container">
-            <div class="swiper-container">
+            <div class="swiper-container" data-aos="fade-up" data-aos-duration="1500">
                 <swiper 
                     class="similar-products" 
                     :modules="modules"
@@ -124,7 +124,8 @@ import 'swiper/css/navigation';
 import ProductComponent from '@/components/ProductComponent.vue';
 import HeartComponent from '@/components/HeartComponent.vue';
 import CloseBtnComponent from '../../components/CloseBtnComponent.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import AOS from "aos";
 const openPaymentModal = ref(false)
 const openReturnModal = ref(false)
 //  DOCUMENT ADDEVENTLISTENER 1
@@ -136,4 +137,9 @@ document.addEventListener('keydown', (e) => {
 })
 
 const modules = [Navigation, A11y];
+
+
+onMounted(() => {
+    AOS.init();
+})
 </script>

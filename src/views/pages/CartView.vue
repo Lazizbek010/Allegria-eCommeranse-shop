@@ -1,8 +1,8 @@
 <template>
     <div class="cart-view">
         <div v-if="false" class="empty-basket">
-            <h1 class="empty-basket__title cart-view__title">Ваша корзина пуста</h1>
-            <div class="empty-basket__img">
+            <h1 class="empty-basket__title cart-view__title animate__animated animate__slow animate__shakeX">Ваша корзина пуста</h1>
+            <div class="empty-basket__img animate__animated animate__zoomIn animate__slow">
                 <img src="@/assets/images/empty-cart.svg" alt="">
                 <div class="empty-basket__img-blur"></div>
             </div>
@@ -10,10 +10,10 @@
             <router-link :to="{ name: 'products' }" class="btn btn-empty-basket">перейти в каталог</router-link>
         </div>
         <div v-else class="full-basket">
-            <h1 class="full-basket__title cart-view__title">Корзина</h1>
+            <h1 class="full-basket__title cart-view__title animate__animated animate__slow animate__shakeY">Корзина</h1>
             <div class="full-basket__border">
                 <div class="full-basket__container">
-                <div class="full-basket__container__info">
+                <div class="full-basket__container__info" data-aos="fade-right" data-aos-duration="1500">
                     <div class="full-basket__container__info__about-user">
                         <input class="select-font" type="text" placeholder="First Name">
                         <input class="select-font" type="text" placeholder="Last Name">
@@ -37,7 +37,10 @@
                     <button class="btn order-btn" disabled>Заказать</button>
                 </div>
                 <div class="full-basket__container__card">
-                    <div class="full-basket__container__card__item-border" v-for="item in 2" :key="item">
+                    <div class="full-basket__container__card__item-border" 
+                    v-for="item in 8" :key="item"
+                    data-aos="zoom-in"
+                    data-aos-duration="1500">
                         <pushed-porduct-component></pushed-porduct-component>
                     </div>
                     <div class="total">
@@ -51,7 +54,12 @@
 </template>
 
 <script setup>
-import pushedPorductComponent from '@/components/PushedPorductComponent.vue'
+import pushedPorductComponent from '@/components/PushedPorductComponent.vue';
+import { onMounted } from 'vue';
+import AOS from "aos";
+onMounted(() => {
+    AOS.init();
+})
 </script>
 
 <style lang="scss" scoped></style>
