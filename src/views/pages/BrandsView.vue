@@ -85,7 +85,7 @@
             </div>
         </section>
         <section class="lucy">
-            <div class="lucy__info" data-aos="flip-up" data-aos-duration="2000">
+            <div class="lucy__info">
                 <h1 class="cormorant-500"><span>бренд</span>george gina & lucy</h1>
                 <p class="description-text">Бренд основан в 2004 году недалеко от Франкфурта, когда супруги Николь Бейли
                     и Николас Нойхаус вместе
@@ -95,10 +95,10 @@
             <div class="lucy__img"></div>
             <div class="container">
                 <div class="lucy__about">
-                <div class="lucy__about__img" data-aos="flip-left" data-aos-duration="2000">
+                <div class="lucy__about__img">
                     <img src="@/assets/images/about-us-info-img1.png" alt="">
                 </div>
-                <div class="lucy__about__text" data-aos="flip-right" data-aos-duration="2000">
+                <div class="lucy__about__text">
                     <h1 class="avenir-800">george gina & lucy</h1>
                     <p class="description-text">Популярность и любовь дизайнеры заслужили тем, что соединили в своих
                         творениях оригинальность,
@@ -113,7 +113,7 @@
             </div>
             </div>
         </section>
-        <!-- <section class="birkenstock">
+        <section class="birkenstock">
             <div class="birkenstock__img">
                 <div class="birkenstock__img__info container" data-aos="fade-up" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>birkenstock</h1>
@@ -146,7 +146,7 @@
                 </div>
             </div>
             </div>
-        </section> -->
+        </section>
     </div>
 </template>
 
