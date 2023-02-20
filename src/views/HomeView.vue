@@ -73,8 +73,8 @@
                                 ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip</p>
                             <router-link :to="{name: 'products'}" class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</router-link>
                         </div>
-                        <div class="collection__img" data-aos="zoom-in-left" data-aos-duration="1000">
-                            <img src="@/assets/images/collection-img.png" alt="">
+                        <div class="collection__img">
+                            <img src="@/assets/images/collection-img.png" alt="" data-aos="zoom-in" data-aos-duration="1000">
                             <p class="collection__img__abso collection__text">
                                 Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip
                             </p>
