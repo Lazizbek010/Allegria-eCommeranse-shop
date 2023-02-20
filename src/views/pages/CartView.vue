@@ -1,7 +1,7 @@
 <template>
     <div class="cart-view">
         <div v-if="true" class="empty-basket">
-            <h1 class="empty-basket__title cart-view__title animate__animated animate__slow animate__shakeX">Ваша корзина пуста</h1>
+            <h1 class="empty-basket__title cart-view__title animate__animated animate__slow animate__bounce">Ваша корзина пуста</h1>
             <div class="empty-basket__img animate__animated animate__zoomIn animate__slow">
                 <img src="@/assets/images/empty-cart.svg" alt="">
                 <div class="empty-basket__img-blur"></div>

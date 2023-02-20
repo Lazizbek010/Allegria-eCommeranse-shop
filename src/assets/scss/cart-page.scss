@@ -35,6 +35,9 @@
                 background: #E8E8E8;
                 filter: blur(2.5px);    
                 border-radius: 50px;
+                @include media(500px){
+                    width: 300px;
+                }
             }
         }
         p{
