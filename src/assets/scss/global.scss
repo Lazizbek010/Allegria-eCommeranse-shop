@@ -70,7 +70,28 @@
         }
     }
 }
-
+.toTop{
+    cursor: pointer;
+    position: fixed;
+    z-index: 2000;
+    right: 25px;
+    bottom: 47px;
+    background: var(--tomato-color);
+    width: 43px;
+    height: 43px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    transition: .7s;
+    box-shadow: 0 0 6px 2px #d6d6d6; 
+    svg{
+        width: 22px;
+        height: 22px;
+        path{
+            fill: #fff;
+        }
+    }   
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;

@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- NAVBAR -->
-        <div class="nav">
+        <div class="nav" :class='{show: scroll}'>
             <div class="container">
                 <router-link :to="{name: 'home'}" class="logo links-page">
                     <img src="@/assets/images/logo.svg" alt="logo">
@@ -166,20 +166,37 @@
 <script setup>
 import { useCounterStore } from '@/stores/Counter.js'
 import NavMenuComponent from './NavMenuComponent.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 const store = useCounterStore()
 const resNav = ref(true);
 const showPassword = ref(true);
 const openEntranceModal = ref(false);
 const forgotModal = ref(false);
 const submitRestore = ref(true);
+const scroll = ref(false);
+
+
+
+
+
+
+
 function openForgotModal(){
     openEntranceModal.value = false
     forgotModal.value = true
     submitRestore.value = true
 }
-// function toRegist(){
-
-// }
+window.addEventListener('scroll', () => {
+      if(window.scrollY > 250){
+        scroll.value = true
+      } else {
+        scroll.value = false
+      }
+    })
 </script>
 
+<style lang="scss">
+.nav.show{
+  position: fixed;
+}
+</style>
