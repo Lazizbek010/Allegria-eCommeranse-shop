@@ -84,7 +84,7 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="lucy">
+        <section class="lucy">
             <div class="lucy__info" data-aos="flip-up" data-aos-duration="2000">
                 <h1 class="cormorant-500"><span>бренд</span>george gina & lucy</h1>
                 <p class="description-text">Бренд основан в 2004 году недалеко от Франкфурта, когда супруги Николь Бейли
@@ -112,7 +112,7 @@
                 </div>
             </div>
             </div>
-        </section> -->
+        </section>
         <!-- <section class="birkenstock">
             <div class="birkenstock__img">
                 <div class="birkenstock__img__info container" data-aos="fade-up" data-aos-duration="2000">
