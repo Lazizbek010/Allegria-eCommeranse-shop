@@ -13,7 +13,7 @@
                 </div>
             </div>
         </section>
-        <section class="american-vintage">
+        <!-- <section class="american-vintage">
             <div class="container">
                 <div class="american-vintage__info">
                     <div class="american-vintage__info__left" data-aos="fade-right" data-aos-duration="2000">
@@ -40,8 +40,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="deha">
+        </section> -->
+        <!-- <section class="deha">
             <div class="deha__hero">
                 <div class="deha__hero__text" data-aos="zoom-in-up" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>DEHA</h1>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="lucy">
             <div class="lucy__info" data-aos="flip-up" data-aos-duration="2000">
                 <h1 class="cormorant-500"><span>бренд</span>george gina & lucy</h1>
@@ -113,7 +113,7 @@
             </div>
             </div>
         </section>
-        <section class="birkenstock">
+        <!-- <section class="birkenstock">
             <div class="birkenstock__img">
                 <div class="birkenstock__img__info container" data-aos="flip-right" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>birkenstock</h1>
@@ -146,7 +146,7 @@
                 </div>
             </div>
             </div>
-        </section>
+        </section> -->
     </div>
 </template>
 
