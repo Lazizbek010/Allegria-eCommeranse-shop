@@ -85,7 +85,7 @@
             </div>
         </section>
         <section class="lucy">
-            <div class="lucy__info">
+            <div class="lucy__info" data-aos="zoom-in" data-aos-duration="2000">
                 <h1 class="cormorant-500"><span>бренд</span>george gina & lucy</h1>
                 <p class="description-text">Бренд основан в 2004 году недалеко от Франкфурта, когда супруги Николь Бейли
                     и Николас Нойхаус вместе
@@ -95,12 +95,12 @@
             <div class="lucy__img"></div>
             <div class="container">
                 <div class="lucy__about">
-                <div class="lucy__about__img">
-                    <img src="@/assets/images/about-us-info-img1.png" alt="">
-                </div>
-                <div class="lucy__about__text">
-                    <h1 class="avenir-800">george gina & lucy</h1>
-                    <p class="description-text">Популярность и любовь дизайнеры заслужили тем, что соединили в своих
+                    <div class="lucy__about__img" data-aos="zoom-in" data-aos-duration="2000">
+                        <img src="@/assets/images/about-us-info-img1.png" alt="">
+                    </div>
+                    <div class="lucy__about__text" data-aos="flip-up" data-aos-duration="2000">
+                        <h1 class="avenir-800">george gina & lucy</h1>
+                        <p class="description-text">Популярность и любовь дизайнеры заслужили тем, что соединили в своих
                         творениях оригинальность,
                         индивидуальность и легкий юмор, что вызвало у них появление огромного количества поклонниц во
                         всем мире.
@@ -108,9 +108,9 @@
                         брендовых сумок в том, что они имеют преувеличенно крупную фурнитуру – кольца, карабины и
                         молнии.
                         Такие сумки созданы специально для тех , кто любит индивидуальность и неповторимость.
-                    </p>
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
         <section class="birkenstock">
