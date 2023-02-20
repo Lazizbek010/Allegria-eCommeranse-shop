@@ -13,13 +13,13 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="american-vintage">
+        <section class="american-vintage">
             <div class="container">
-                <div class="american-vintage__info">
-                    <div class="american-vintage__info__left" data-aos="fade-right" data-aos-duration="2000">
+                <div class="american-vintage__info" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="american-vintage__info__left" data-aos="flip-up" data-aos-duration="1500">
                         <img src="@/assets/images/about-us-info-img2.png" alt="">
                     </div>
-                    <div class="american-vintage__info__right" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="american-vintage__info__right">
                         <h1 class="avenir-800">American vintage</h1>
                         <p class="description-text">Продукция также включает немногочисленные аксессуары в виде шарфов,
                             ремней, шапок, а также
@@ -40,8 +40,8 @@
                     </div>
                 </div>
             </div>
-        </section> -->
-        <!-- <section class="deha">
+        </section>
+        <section class="deha">
             <div class="deha__hero">
                 <div class="deha__hero__text" data-aos="zoom-in-up" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>DEHA</h1>
@@ -50,8 +50,8 @@
                 </div>
             </div>
             <div class="container">
-                <div class="deha__about">
-                    <div class="deha__about__left" data-aos="fade-right" data-aos-duration="2000">
+                <div class="deha__about" data-aos-duration="2000" data-aos="zoom-in">
+                    <div class="deha__about__left" data-aos="flip-left" data-aos-duration="3000">
                         <h1 class="avenir-800">DeHA</h1>
                         <p class="description-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi esse
                             sed
@@ -78,12 +78,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deha__about__right" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="deha__about__right" data-aos-duration="2000" data-aos="flip-right">
                         <img src="@/assets/images/deha-about-img01.png" alt="">
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <section class="lucy">
             <div class="lucy__info" data-aos="flip-up" data-aos-duration="2000">
                 <h1 class="cormorant-500"><span>бренд</span>george gina & lucy</h1>
@@ -95,10 +95,10 @@
             <div class="lucy__img"></div>
             <div class="container">
                 <div class="lucy__about">
-                <div class="lucy__about__img" data-aos="fade-up-right" data-aos-duration="2000">
+                <div class="lucy__about__img" data-aos="flip-left" data-aos-duration="2000">
                     <img src="@/assets/images/about-us-info-img1.png" alt="">
                 </div>
-                <div class="lucy__about__text" data-aos="fade-up-left" data-aos-duration="2000">
+                <div class="lucy__about__text" data-aos="flip-right" data-aos-duration="2000">
                     <h1 class="avenir-800">george gina & lucy</h1>
                     <p class="description-text">Популярность и любовь дизайнеры заслужили тем, что соединили в своих
                         творениях оригинальность,
@@ -113,16 +113,16 @@
             </div>
             </div>
         </section>
-        <!-- <section class="birkenstock">
+        <section class="birkenstock">
             <div class="birkenstock__img">
-                <div class="birkenstock__img__info container" data-aos="flip-right" data-aos-duration="2000">
+                <div class="birkenstock__img__info container" data-aos="fade-up" data-aos-duration="2000">
                     <h1 class="cormorant-500"><span>бренд</span>birkenstock</h1>
                     <p class="description-text">BIRKENSTOCK — известная немецкая компания, занимающаяся производством ортопедической обуви.</p>
                 </div>
             </div>
             <div class="container">
-                <div class="birkenstock__about">
-                <div class="birkenstock__about__left" data-aos="fade-right" data-aos-duration="2000">
+                <div class="birkenstock__about" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="birkenstock__about__left" data-aos="flip-left" data-aos-duration="3000">
                     <h1 class="avenir-800">birkenstock</h1>
                     <p class="description-text">Свою славу она заслужила благодаря удобству, экологичности материалов и поддержанию здоровья ног.
                         Знаменитая мягкая ортопедическая стелька фирмы BIRKENSTOCK позволяет долгое время находиться в
@@ -141,12 +141,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="birkenstock__about__right" data-aos="fade-left" data-aos-duration="2000">
+                <div class="birkenstock__about__right" data-aos="flip-right" data-aos-duration="3000">
                     <img src="@/assets/images/bg-hero-four2.png" alt="">
                 </div>
             </div>
             </div>
-        </section> -->
+        </section>
     </div>
 </template>
 
