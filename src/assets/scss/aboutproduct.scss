@@ -141,8 +141,9 @@
             }
             .about-product__desc-title{
                 color: var(--primary-dark);
-                width: 81px;
                 text-align: start;
+                height: 60px;
+                overflow-y: auto;
             }
         }
     }

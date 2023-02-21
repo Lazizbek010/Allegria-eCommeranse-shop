@@ -136,7 +136,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import FamousItemComponent from '../components/FamousItemComponent.vue';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -167,6 +167,7 @@ const media = {
         spaceBetween: 45
     }
 }
+
 
 
 

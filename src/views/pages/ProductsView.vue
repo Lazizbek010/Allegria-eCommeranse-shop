@@ -109,7 +109,7 @@
             </div>
             <div class="products__card">
                 <product-component
-                 v-for="(item, i) in 15" :key="i"
+                 v-for="(item, i) in store.products" :key="i" :product="item"
                  data-aos="fade-up"
                 data-aos-duration="1500" 
                 >
@@ -160,6 +160,8 @@
 import ProductComponent from '../../components/ProductComponent.vue';
 import { ref, onMounted } from 'vue';
 import AOS from "aos";
+import { useCounterStore } from '@/stores/Counter.js';
+const store = useCounterStore();
 
 const hidden = ref(false)
 const filtrModalEvent = ref(false)

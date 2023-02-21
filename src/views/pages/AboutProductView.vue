@@ -11,37 +11,38 @@
             <div class="about-product__info">
                 <div class="about-product__info__img" data-aos="fade-right" data-aos-duration="1500">
                     <div class="total-img">
-                        <img v-for="image in 3" :key="image" src="@/assets/images/famous-item1.png" alt="">
+                        <img v-for="(img, i) in pr.images" :key="i" :src="img" alt="" @click="changeImg(i)">
                     </div>
                     <div class="main-img">
-                        <img src="@/assets/images/famous-item1.png" alt="" />
-                        <heart-component></heart-component>
+                        <img :src="img" alt="" />
+                        <div class="heart" @click="like = !like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                                :fill="like ? '#ff0000' : 'none'">
+                                <path :stroke="like ? '#ff0000' : '#254A5A'" stroke-linecap="round"
+                                    d="M2.318 2.318a4.5 4.5 0 0 1 6.364 0L10.5 4.136l1.818-1.818a4.5 4.5 0 0 1 6.364 6.364L10.5 16.864 2.318 8.682a4.5 4.5 0 0 1 0-6.364Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="about-product__info__setting" data-aos-duration="1500" data-aos="zoom-in">
-                    <h1 class="about-product__name avenir-800 animate__rubberBand animate__animated animate__slow animate__delay-2s">American vintage</h1>
-                    <h6 class="about-product__title">Classic shirt</h6>
+                    <h1
+                        class="about-product__name avenir-800 animate__rubberBand animate__animated animate__slow animate__delay-2s">
+                        {{pr.title}}</h1>
+                    <h6 class="about-product__title">{{pr.name}}</h6>
                     <p class="about-product__price">
-                        <span class="product-old-item">6100 UAH</span>
-                        <span class="product-new-item">3800 UAH</span>
+                        <span class="product-old-item">{{pr.price.oldPrice}}</span> 
+                        <span class="product-new-item">{{pr.price.newPrice}}</span>
                     </p>
                     <div class="about-product-slider"></div>
                     <p class="about-product__size">Размер</p>
                     <ul class="about-product__size-list">
-                        <li class="have">XS</li>
-                        <li class="have">S</li>
-                        <li class="have">M</li>
-                        <li class="have">L</li>
-                        <li>XL</li>
-                        <li>XP</li>
+                        <li class="have" v-for="(size, i) in pr.sizes" :key="i">{{ size }}</li>
                     </ul>
                     <a class="about-product__link-400" href="#">Таблица размеров</a>
                     <p class="about-product__link-400">Цвет</p>
                     <ul class="about-product__color-list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li v-for="color in pr.colors" :style="{backgroundColor: color}"></li>
                     </ul>
                     <div class="selection1">
                         <button class="btn add-to-cart-btn">добавить в корзину</button>
@@ -52,25 +53,19 @@
                         <button @click="openReturnModal = true" class="select-font links-page">Возврат и обмен</button>
                     </div>
                     <h4 class="about-product__desc-500">ИНФОРМАЦИЯ О ТОВАРЕ</h4>
-                    <p class="about-product__desc-title select-font">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-product__desc-title select-font">{{ pr.description }}</p>
                 </div>
             </div>
         </div>
-        <div class="about-product__container">
+        <!-- <div class="about-product__container">
             <div class="swiper-container" data-aos="fade-up" data-aos-duration="1500">
-                <swiper 
-                    class="similar-products" 
-                    :modules="modules"
-                    :spaceBetween="19"
-                    :slidesPerView="'auto'"
-                    navigation
-                    >
-                        <swiper-slide v-for="sim in 9" :key="sim" class="similar-products-slide">
-                            <product-component id="similar-products-slide-item"></product-component>
-                        </swiper-slide>
+                <swiper class="similar-products" :modules="modules" :spaceBetween="19" :slidesPerView="'auto'" navigation>
+                    <swiper-slide v-for="sim in 9" :key="sim" class="similar-products-slide">
+                        <product-component id="similar-products-slide-item"></product-component>
+                    </swiper-slide>
                 </swiper>
             </div>
-        </div>
+        </div> -->
         <!-- Payment Modal Style Alohida scss fileda-->
         <div class="overlay" v-show="openPaymentModal" @click="openPaymentModal = false"></div>
         <div v-show="openPaymentModal" class="modal modal__payment" :class="{ 'showModal': openPaymentModal }">
@@ -112,22 +107,43 @@
                 пересылка товара перевозчиком Новой Почтой или любым другим, на склад интернет магазина ALLEGRIA,
                 расположенного в городе Харькове, осуществляется за счет компании.</p>
         </div>
-</div>
+    </div>
 </template>
 
 <script setup>
-
+import ProductComponent from '@/components/ProductComponent.vue';
+import CloseBtnComponent from '../../components/CloseBtnComponent.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, A11y } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import ProductComponent from '@/components/ProductComponent.vue';
-import HeartComponent from '@/components/HeartComponent.vue';
-import CloseBtnComponent from '../../components/CloseBtnComponent.vue';
-import { ref, onMounted } from 'vue';
 import AOS from "aos";
+import { ref, onMounted, computed, defineProps } from 'vue';
+import { useCounterStore } from '@/stores/Counter.js'
+import { useRoute } from 'vue-router'
+const store = useCounterStore();
+const route = useRoute();  
 const openPaymentModal = ref(false)
 const openReturnModal = ref(false)
+const like = ref(false)
+const id = Number(route.params.id); 
+
+const img = ref('')
+const pr = computed(() => {
+    let item = store.products.find(el => el.id === Number(route.params.id));
+    img.value = item.img;
+    return item;
+})
+
+function changeImg(i){
+    let item = store.products.find(el => el.id === Number(route.params.id));
+    img.value = item.images[i]
+} 
+
+
+
+
+
 //  DOCUMENT ADDEVENTLISTENER 1
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -135,10 +151,7 @@ document.addEventListener('keydown', (e) => {
         openReturnModal.value = false;
     }
 })
-
 const modules = [Navigation, A11y];
-
-
 onMounted(() => {
     AOS.init();
 })
