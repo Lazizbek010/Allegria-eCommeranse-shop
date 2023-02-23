@@ -105,6 +105,10 @@
             height: 325px;
             position: relative;
             margin-bottom: 15px;
+            overflow: hidden;
+            &:hover img{
+                transform: scale(1.1);
+            }
             a{
                 display: block;
                 width: 270px;

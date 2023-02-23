@@ -69,6 +69,8 @@
                     <div class="container">
                         <div class="collection__info" data-aos="zoom-in" data-aos-duration="1000">
                             <h1>new arrival</h1>
+                            <pre>{{ malumot.title }}</pre>
+                            <pre>{{ malumot.desc }}</pre>
                             <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
                                 ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip</p>
                             <router-link :to="{name: 'products'}" class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</router-link>
@@ -167,8 +169,13 @@ const media = {
         spaceBetween: 45
     }
 }
-
-
+let malumot = ref({})
+async function bar(){
+    const api = await fetch('http://localhost:3000/prod')
+    const res = await api.json()
+    malumot.value = res
+}
+bar()
 
 
 onMounted(() => {

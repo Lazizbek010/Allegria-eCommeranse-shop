@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "json server —watch db.json vite",
+    "build": "json server --watch db.json vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "json-server": "^0.17.2",
     "pinia": "^2.0.30",
     "swiper": "^9.0.5",
     "vue": "^3.2.45",

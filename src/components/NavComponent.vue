@@ -180,7 +180,6 @@ const scroll = ref(false);
 
 
 
-
 function openForgotModal(){
     openEntranceModal.value = false
     forgotModal.value = true
