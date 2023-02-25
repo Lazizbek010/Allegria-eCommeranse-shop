@@ -134,11 +134,11 @@
                 </div>
             </div>
             <div class="products__card">
-                <product-component v-for="(item, i) in store.products" :key="i" :product="item" data-aos="fade-up"
+                <product-component v-for="(item, i) in prs" :key="i" :product="item" data-aos="fade-up"
                     data-aos-duration="1500">
                 </product-component>
             </div>
-            <button class="btn show-more-btn">Показать больше</button>
+            <button class="btn show-more-btn" @click="yana">Показать больше</button>
         </div>
         <div class="products__menu" :class="{ block: filtrModalEvent }">
             <ul class="gender">
@@ -189,7 +189,7 @@
 
 <script setup>
 import ProductComponent from "../../components/ProductComponent.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import AOS from "aos";
 import { useCounterStore } from "@/stores/Counter.js";
 const store = useCounterStore();
@@ -217,6 +217,16 @@ document.addEventListener("keydown", (e) => {
 onMounted(() => {
     AOS.init();
 });
+
+const page = ref(1);
+const prs = computed(() => {
+    return store.products.slice(0, page.value * 6);
+});
+
+function yana(){
+    if(store.products.length > page.value * 10)
+    page.value++;
+}
 </script>
 
 <style lang="scss" scoped></style>
