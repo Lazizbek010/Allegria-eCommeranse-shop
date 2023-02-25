@@ -4,7 +4,7 @@
             <pushed-porduct-component 
             v-for="item in 3" :key="item"
             data-aos="zoom-in"
-            data-aos-duration="1500"
+            data-aos-duration="1000"
             ></pushed-porduct-component>
         </div>
     </div>

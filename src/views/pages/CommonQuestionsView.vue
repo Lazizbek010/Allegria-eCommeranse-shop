@@ -10,7 +10,7 @@
             <div class="com-ques__container__info">
                 <div class="com-ques__container__info__text"
                 data-aos="zoom-in-right"
-                data-aos-duration="1000">
+                data-aos-duration="500">
                     <h3>ПОКУПКИ</h3>
                     <ul>
                         <li>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="com-ques__container__info__form"
                 data-aos="fade-down"
-                data-aos-duration="3000">
+                data-aos-duration="2000">
                     <form action="#">
                         <h2>Есть вопросы или предложения? НАПИШИТЕ НАМ</h2>
                         <input required type="text" placeholder="Имя" name="name" id="name">

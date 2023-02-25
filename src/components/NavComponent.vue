@@ -94,6 +94,7 @@
         </div>
         <!-- USER ENTRANCE MODAL -->
         <div class="overlay" v-show="openEntranceModal" @click="openEntranceModal = false"></div>
+        <transition name="modalsEvent">
         <div class="modal modal-enrtance" v-show="openEntranceModal">
             <div class="close-modal" @click="openEntranceModal = false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none">
@@ -142,6 +143,8 @@
                 </div>
             </form>
         </div>
+        </transition>
+
         <!-- USER FORGOT MODAL -->
         <div class="overlay" v-show="forgotModal" @click="forgotModal = false"></div>
         <div class="modal modal-enrtance modal-forgot" :class="{'padding-email': !submitRestore}" v-show="forgotModal">

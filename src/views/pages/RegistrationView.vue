@@ -3,7 +3,7 @@
         <h1 class="registrsation__title user-modal-title animate__animated animate__slow animate__shakeX">Регистрация</h1>
         <form action="#" class="registrsation__form" 
         data-aos="zoom-in"
-        data-aos-duration="1500">
+        data-aos-duration="1000">
             <input class="select-font" type="text" placeholder="Имя">
             <input class="select-font" type="text" placeholder="Фамилия">
             <input class="select-font" type="tel" placeholder="Телефон">

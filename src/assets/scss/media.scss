@@ -86,9 +86,9 @@
                 right: 40px;
                 top: 160px;
                 width: 320px;
-
                 &.block {
                     display: block;
+                    transition: all 1s;
                 }
             }
         }

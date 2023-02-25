@@ -170,6 +170,7 @@
     right: 0;
     height: 100vh;
     z-index: 2012;
+    transform: translateX(0%);
     h1{
         width: 100%;
         display: flex;
@@ -433,4 +434,22 @@
     .new-price{
         color: var(--tomato-color);
     }
+}
+
+.modalsEvent-enter-active,
+.modalsEvent-leave-active {
+  transition: all .3s ease-out;
+}
+
+.modalsEvent-enter-from,
+.modalsEvent-leave-to {
+  transform: translate(-50%, -50%) scale(0);  
+}
+.filtr-enter-active,
+.filtr-leave-active{
+    transition: all .3s ease;
+}
+.filtr-enter-from,
+.filtr-leave-to{
+    transform: translateX(110%);
 }

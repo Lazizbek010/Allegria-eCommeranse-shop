@@ -67,16 +67,14 @@
             <section class="bg-collection">
                 <div class="collection">
                     <div class="container">
-                        <div class="collection__info" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="collection__info" data-aos="zoom-in" data-aos-duration="500">
                             <h1>new arrival</h1>
-                            <pre>{{ malumot.title }}</pre>
-                            <pre>{{ malumot.desc }}</pre>
                             <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
                                 ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip</p>
                             <router-link :to="{name: 'products'}" class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</router-link>
                         </div>
                         <div class="collection__img">
-                            <img src="@/assets/images/collection-img.png" alt="" data-aos="zoom-in" data-aos-duration="1000">
+                            <img src="@/assets/images/collection-img.png" alt="" data-aos="zoom-in" data-aos-duration="500">
                             <p class="collection__img__abso collection__text">
                                 Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip
                             </p>
@@ -86,7 +84,7 @@
             </section>
             <section class="famous">
                 <h1 class="famous__title">Популярное</h1>
-                <div class="famous__container" data-aos="fade-up" data-aos-duration="2000">
+                <div class="famous__container" data-aos="fade-up" data-aos-duration="1500">
                     <swiper 
                     class="famous__container__card" 
                     :modules="modules2"
@@ -119,7 +117,7 @@
                             stroke="#FFFFFF" />
                     </svg>
                 </div>
-                <div class="about__container" data-aos="fade-up-right" data-aos-duration="1500">
+                <div class="about__container" data-aos="fade-up-right" data-aos-duration="1000">
                     <div class="about__container__info">
                         <h1><span>О</span>нас</h1>
                         <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
@@ -169,14 +167,6 @@ const media = {
         spaceBetween: 45
     }
 }
-let malumot = ref({})
-async function bar(){
-    const api = await fetch('http://localhost:3000/prod')
-    const res = await api.json()
-    malumot.value = res
-}
-bar()
-
 
 onMounted(() => {
     AOS.init();
