@@ -1,6 +1,6 @@
 <template>
     <div class="cart-view">
-        <div v-if="true" class="empty-basket">
+        <div v-if="!store.cartPr.length" class="empty-basket">
             <h1 class="empty-basket__title cart-view__title animate__animated animate__slow animate__bounce">Ваша корзина пуста</h1>
             <div class="empty-basket__img animate__animated animate__zoomIn animate__slow">
                 <img src="@/assets/images/empty-cart.svg" alt="">
@@ -38,10 +38,10 @@
                 </div>
                 <div class="full-basket__container__card">
                     <div class="full-basket__container__card__item-border" 
-                    v-for="item in 8" :key="item"
+                    v-for="item in store.cartPr" :key="item"
                     data-aos="zoom-in"
                     data-aos-duration="1500">
-                        <pushed-porduct-component></pushed-porduct-component>
+                        <pushed-porduct-component :item="item" @remove="remove" />
                     </div>
                     <div class="total">
                         <h1>всего: <span>7 600 UAH</span></h1>
@@ -55,11 +55,18 @@
 
 <script setup>
 import pushedPorductComponent from '@/components/PushedPorductComponent.vue';
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import AOS from "aos";
+import { useCounterStore } from "@/stores/Counter.js";
+const store = useCounterStore();
 onMounted(() => {
     AOS.init();
 })
+
+const remove = (id) => {
+  store.removeProductFromCart(id)
+}
+
 </script>
 
 <style lang="scss" scoped></style>

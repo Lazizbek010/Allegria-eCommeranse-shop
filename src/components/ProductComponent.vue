@@ -33,8 +33,14 @@ const fav = computed(() => {
 })
 
 function addToWishlist(){
-    store.cart++
-    store.wishlist.push(product)
+    if(!fav.value) {
+        store.wishlist.push(product)
+    }
+    else {
+        store.wishlist = store.wishlist.filter(p => p.id !== product.id)
+    }
+
+    localStorage.setItem('WISH', JSON.stringify(store.wishlist))
 }
 
 </script>

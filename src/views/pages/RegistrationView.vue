@@ -25,8 +25,8 @@
                 </div>
             </div>
             <div class="registrsation__form__check">
-                <input type="checkbox" id="subscribe">
-                <label for="subscribe">Подпсаться на рассылку</label>
+                <input type="checkbox" id="subscribe1">
+                <label for="subscribe1">Подпсаться на рассылку</label>
             </div>
             <div class="registrsation__form__check">
                 <input  type="checkbox" id="subscribe">
@@ -46,7 +46,8 @@ import AOS from "aos";
 
 const showPassword = ref(true)
 const showPassword2 = ref(true)
-
+const password = ref("");
+const password2 = ref("");
 onMounted(() => {
     AOS.init();
 })

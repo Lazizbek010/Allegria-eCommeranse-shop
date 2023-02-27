@@ -16,7 +16,7 @@
         </div>
         <div class="about-us__text1">
             <div class="container" data-aos="flip-right" data-aos-duration="2000">
-                <h1>Заголовок</h1>
+                <h1>{{Заголовок}}</h1>
             <p class="description-text">American Vintage в первую очередь – это качественный трикотаж, изящная красота и
                 летящий крой. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam optio hic modi totam consequatur assumenda repudiandae, suscipit commodi magnam soluta similique, quis id veritatis cupiditate ut illum placeat necessitatibus sit?</p>
             </div>

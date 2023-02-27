@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <div class="footer__info" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="footer__info__title">Будьте в курсе событий</h1>
+            <h1 class="footer__info__title">{{$t('stay updated')}}</h1>
             <div class="footer__info__form">
                 <input type="email" placeholder="E-mail">
                 <button @click="discountModal = !discountModal">
@@ -9,14 +9,14 @@
                 </button>
             </div>
             <ul class="footer__info__list">
-                <li><router-link class="links-page" :to="{name: 'about-us'}">О нас</router-link></li>
-                <li><router-link class="links-page" :to="{name: 'common-questions'}">Распространенные вопросы</router-link></li>
-                <li><router-link class="links-page" :to="{name: 'brands'}">Бренды</router-link></li>
+                <li><router-link class="links-page" :to="{name: 'about-us'}">{{$t("About Us")}}</router-link></li>
+                <li><router-link class="links-page" :to="{name: 'common-questions'}">{{$t("Common Questions")}}</router-link></li>
+                <li><router-link class="links-page" :to="{name: 'brands'}">{{$t('Brands')}}</router-link></li>
             </ul>
         </div>
         <div class="footer__author">
             <div class="container">
-                <p>Все права защищены  &copy; Lazizbek Isaqov</p>
+                <p>{{$t("All rights reserved")}}  &copy; Lazizbek Isaqov</p>
                 <p>Дизайн и разработка:</p>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="about-product container">
+    <div v-if="pr" class="about-product container">
         <ul class="about-us__hero__list">
             <li>
                 <router-link class="links-page" :to="{ name: 'home' }">Главная</router-link>
@@ -15,16 +15,16 @@
         </ul>
         <div class="about-product__container">
             <div class="about-product__info">
-                <div class="about-product__info__img" data-aos="fade-right" data-aos-duration="1500">
+                <div class="about-product__info__img" data-aos="fade-right" data-aos-duration="1000">
                     <div class="total-img">
                         <img v-for="(img, i) in pr.images" :key="i" :src="img" alt="" @click="changeImg(i)" />
                     </div>
-                    <div class="main-img">
+                    <div class="main-img" v-if="pr.images">
                         <img :src="pr.images[index]" alt="" />
-                        <div class="heart" @click="like = !like">
+                        <div class="heart" @click="addToWishlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18"
-                                :fill="like ? '#ff0000' : 'none'">
-                                <path :stroke="like ? '#ff0000' : '#254A5A'" stroke-linecap="round"
+                                :fill="fav ? '#ff0000' : 'none'">
+                                <path :stroke="fav ? '#ff0000' : '#254A5A'" stroke-linecap="round"
                                     d="M2.318 2.318a4.5 4.5 0 0 1 6.364 0L10.5 4.136l1.818-1.818a4.5 4.5 0 0 1 6.364 6.364L10.5 16.864 2.318 8.682a4.5 4.5 0 0 1 0-6.364Z"
                                     clip-rule="evenodd" />
                             </svg>
@@ -33,11 +33,11 @@
                 </div>
                 <div class="about-product__info__setting" data-aos-duration="1500" data-aos="zoom-in">
                     <h1
-                        class="about-product__name avenir-800 animate__rubberBand animate__animated animate__slow animate__delay-2s">
+                        class="about-product__name avenir-800 animate__rubberBand animate__animated animate__delay-2s">
                         {{ pr.title }}
                     </h1>
                     <h6 class="about-product__title">{{ pr.name }}</h6>
-                    <p class="about-product__price">
+                    <p class="about-product__price" v-if="pr.price">
                         <span class="product-old-item">{{ pr.price.oldPrice }}</span>
                         <span class="product-new-item">{{ pr.price.newPrice }}</span>
                     </p>
@@ -54,7 +54,7 @@
                         <li v-for="color in pr.colors" :key="color" :style="{ backgroundColor: color }"></li>
                     </ul>
                     <div class="selection1">
-                        <button class="btn add-to-cart-btn">добавить в корзину</button>
+                        <button class="btn add-to-cart-btn" @click="addToCart(pr)">добавить в корзину</button>
                         <button class="btn buy-btn">купить в один клик</button>
                     </div>
                     <div class="selection2">
@@ -75,8 +75,11 @@
         <div class="about-product__container">
             <div class="swiper-container" data-aos="fade-up" data-aos-duration="1500">
                 <swiper class="similar-products" :modules="modules" :spaceBetween="19" :slidesPerView="'auto'" navigation>
-                    <swiper-slide class="similar-products-slide">
-                        <!-- <product-component id="similar-products-slide-item"></product-component> -->
+                    <swiper-slide class="similar-products-slide" v-for="(item, i) in store.products" :key="i" >
+                       <product-component :product="item" 
+                       data-aos="fade-up"
+                            data-aos-duration="1500">
+                        </product-component>
                     </swiper-slide>
                 </swiper>
             </div>
@@ -167,33 +170,56 @@ import { Navigation, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import AOS from "aos";
-import { ref, onMounted, computed, defineProps } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { useCounterStore } from "@/stores/Counter.js";
 import { useRoute } from "vue-router";
 const store = useCounterStore();
-const route = useRoute();
+// const route = useRoute();
 const openPaymentModal = ref(false);
 const openReturnModal = ref(false);
 const like = ref(false);
-const id = Number(route.params.id);
-
+// const id = Number(route.params.id);
+const { id } = defineProps(['id'])
 const index = ref(0);
-const pr = computed(() => {
-    let item = store.products.find((el) => el.id === Number(route.params.id));
-    return item;
-});
+const pr = ref({})
+// const pr = computed(() => {
+//     let item = store.products.find((el) => el.id === Number(route.params.id));
+//     return item;
+// });
 
+async function getPr(){
+    const res = await fetch('http://localhost:3000/products/'+id);
+    const data = await res.json();
+    pr.value = data
+}
+getPr()
 function changeImg(i) {
     index.value = i
 }
 
-//  DOCUMENT ADDEVENTLISTENER 1
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        openPaymentModal.value = false;
-        openReturnModal.value = false;
+const fav = computed(() => {
+    return store.wishlist.find(el => el.id === pr.id);
+})
+
+
+function addToWishlist(){
+    if(!fav.value) {
+        store.wishlist.push(pr)
     }
-});
+    else {
+        store.wishlist = store.wishlist.filter(p => p.id !== pr.id)
+    }
+
+    localStorage.setItem('WISH', JSON.stringify(store.wishlist))
+}
+
+
+
+async function addToCart(p){
+    store.addToCart(p);
+}
+store.getProducts()
+
 const modules = [Navigation, A11y];
 onMounted(() => {
     AOS.init();

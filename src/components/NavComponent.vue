@@ -22,12 +22,13 @@
                                     d="M2.318 2.318a4.5 4.5 0 0 1 6.364 0L10.5 4.136l1.818-1.818a4.5 4.5 0 0 1 6.364 6.364L10.5 16.864 2.318 8.682a4.5 4.5 0 0 1 0-6.364Z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <div v-if="store.cart > 0" class="heart-abso description-text">{{ store.cart }}</div>
+                            <div v-if="store.wishlist && store.wishlist.length > 0" class="heart-abso description-text">{{ store.wishlist.length }}</div>
                         </router-link>
                         <router-link :to="{name: 'cart'}" class="nav-cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" fill="none">
                                 <path stroke="#254A5A" d="M.5 6.5h15v12H.5zM13 6A5 5 0 0 0 3 6" />
                             </svg>
+                            <div v-if="store.cartPr && store.cartPr.length > 0" class="heart-abso description-text">{{ store.cartPr.length }}</div>
                         </router-link>
                         <div class="hamburger" @click="resNav = !resNav">
                             <img v-if="resNav" src="@/assets/icons/hamburger-min.svg" alt="" width="20" height="13">
@@ -177,7 +178,7 @@ const openEntranceModal = ref(false);
 const forgotModal = ref(false);
 const submitRestore = ref(true);
 const scroll = ref(false);
-
+const password = ref('')
 
 
 

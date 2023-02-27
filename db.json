@@ -1,10 +1,11 @@
- {
+{
   "products": [
     {
       "id": 1,
       "title": "Футболка Basico",
       "name": "Classic shirt",
       "discount": "40%",
+      "quantity": 0,
       "img": "/images/fudbolka-basico01.jpeg",
       "images": [
         "/images/fudbolka-basico01.jpeg",
@@ -36,6 +37,7 @@
       "title": "Футболка Puma",
       "name": "Classic shirt",
       "discount": "40%",
+      "quantity": 0,
       "img": "/images/fudbolka-puma01.jpeg",
       "images": [
         "/images/fudbolka-puma01.jpeg",
@@ -253,7 +255,7 @@
       "description": "магазинах, расположенных в Киеве, Харькове, Днепре и Одессе. Для жителей других городов Украиныпересылка товара перевозчиком Новой Почтой или любым другим, на склад интернет магазина ALLEGRIA, расположенного в городе Харькове, осуществляется за счет компании "
     },
     {
-      "id": 11,
+      "id": 10,
       "title": "Туфли Basconi 310367B-YP",
       "name": "Мужские туфли",
       "discount": "55%",
@@ -1205,6 +1207,37 @@
         "XP"
       ],
       "description": "магазинах, расположенных в Киеве, Харькове, Днепре и Одессе. Для жителей других городов Украиныпересылка товара перевозчиком Новой Почтой или любым другим, на склад интернет магазина ALLEGRIA, расположенного в городе Харькове, осуществляется за счет компании "
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "title": "Футболка Puma",
+      "name": "Classic shirt",
+      "discount": "40%",
+      "img": "/images/fudbolka-puma01.jpeg",
+      "images": [
+        "/images/fudbolka-puma01.jpeg",
+        "/images/fudbolka-puma02.jpeg",
+        "/images/fudbolka-puma03.jpeg"
+      ],
+      "colors": [
+        "red",
+        "white"
+      ],
+      "price": {
+        "newPrice": "190 000 so`m",
+        "oldPrice": "300 000 so`m"
+      },
+      "sizes": [
+        "XS",
+        "X",
+        "M",
+        "L",
+        "XL"
+      ],
+      "description": "магазинах, расположенных в Киеве, Харькове, Днепре и Одессе. Для жителей других городов Украиныпересылка товара перевозчиком Новой Почтой или любым другим, на склад интернет магазина ALLEGRIA, расположенного в городе Харькове, осуществляется за счет компании ",
+      "count": 1
     }
   ]
 }

@@ -68,7 +68,7 @@
                 </div>
                 <!-- -------------- Modals ---------- -->
                 <div class="products__select__modals">
-                    <div class="select select-font" @click="openFiltrModal">
+                    <div class="select select-font" @click="filtrModalEvent.value = true">
                         <span>Фильтры</span>
                         <div class="triangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none">
@@ -96,7 +96,7 @@
                         </h1>
                     </div>
                     </Transition>
-                    <div class="select select-font" @click="openSortModal">
+                    <div class="select select-font" @click="sortModalEvent.value = true">
                         <span>Сортировать</span>
                         <div class="triangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="5" fill="none">
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="all">
-                <div class="number-product select-font"><span>1200</span> товаров</div>
+                <div class="number-product select-font"><span>{{store.products.length}}</span> товаров</div>
                 <div class="sort">
                     <label class="number-product select-font" for="sort">Соритировать:</label>
                     <select class="select-font" name="" id="sort">
@@ -135,53 +135,28 @@
             </div>
             <div class="products__card">
                 <product-component v-for="(item, i) in prs" :key="i" :product="item" data-aos="fade-up"
-                    data-aos-duration="1500">
+                    data-aos-duration="500">
                 </product-component>
             </div>
             <button class="btn show-more-btn" @click="yana">Показать больше</button>
         </div>
         <div class="products__menu" :class="{ block: filtrModalEvent }">
             <ul class="gender">
-                <li class="description-text active">Женщины</li>
-                <li class="description-text">Мужчины</li>
+                <li v-for="male in store.allProducts" :key="male" class="description-text active">{{male.title}}</li>
             </ul>
-            <h3 class="products__menu__item">
-                <span>ОДЕЖДА</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none">
+            <h3 class="products__menu__item" v-for="(products, i) in store.allProducts.man.products" :key="i">
+                <span>{{products.title}}</span>
+                <button @click="hiddenList = !hiddenList">
+                    <svg  v-if="!hiddenList" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
+                    <path stroke="#000" d="M5 0v10M0 5h10" />
+                </svg>
+                <svg @click="hiddenList = false" v-else xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none">
                     <path stroke="#E64926" d="M0 1h10" />
                 </svg>
+                </button>
                 <ul>
-                    <li class="select-font">Свитера толтовки</li>
-                    <li class="select-font">Платья юбки</li>
-                    <li class="select-font">Футболки и топы</li>
-                    <li class="select-font">Брюки и шорты</li>
-                    <li class="select-font">Рубашки</li>
-                    <li class="select-font">Комбинезоны</li>
-                    <li class="select-font">Леггинсы</li>
+                    <li v-show="hiddenList" v-for="(item, i) in products.variants" :key="i" class="select-font">{{item.title}}</li>
                 </ul>
-            </h3>
-            <h3 class="products__menu__item">
-                <span>ОБУВЬ</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
-                    <path stroke="#000" d="M5 0v10M0 5h10" />
-                </svg>
-            </h3>
-            <h3 class="products__menu__item">
-                <span>СУМКИ</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
-                    <path stroke="#000" d="M5 0v10M0 5h10" />
-                </svg>
-            </h3>
-            <h3 class="products__menu__item">
-                <span>АКСЕСУАРЫ</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
-                    <path stroke="#000" d="M5 0v10M0 5h10" />
-                </svg>
-            </h3>
-            <h3 class="products__menu__item">
-                <span>БЕЛЬЕ</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
-                    <path stroke="#000" d="M5 0v10M0 5h10" />
-                </svg>
             </h3>
         </div>
     </div>
@@ -195,25 +170,14 @@ import { useCounterStore } from "@/stores/Counter.js";
 const store = useCounterStore();
 store.getProducts()
 const hidden = ref(false);
+const hiddenList = ref(false);
 const filtrModalEvent = ref(false);
 const sortModalEvent = ref(false);
-function openFiltrModal() {
-    filtrModalEvent.value = true;
-}
 function closeFiltrModal() {
     filtrModalEvent.value = false;
     sortModalEvent.value = false;
 }
-function openSortModal() {
-    sortModalEvent.value = true;
-}
-//  DOCUMENT ADDEVENTLISTENER 2
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        filtrModalEvent.value = false;
-        sortModalEvent.value = false;
-    }
-});
+
 onMounted(() => {
     AOS.init();
 });
@@ -224,9 +188,8 @@ const prs = computed(() => {
 });
 
 function yana(){
-    if(store.products.length > page.value * 10)
+    if(store.products.length > page.value * 6)
     page.value++;
 }
 </script>
 
-<style lang="scss" scoped></style>

@@ -99,6 +99,7 @@
     li{
         padding: 0 10px;
         position: relative;
+        cursor: pointer;
         &.active{
             color: var(--tomato-color);
         }

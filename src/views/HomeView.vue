@@ -8,18 +8,18 @@
         :pagination="{ clickable: true }"
         :centeredSlides="true" 
         :autoplay='{
-            "delay": 4000,
+            "delay": 3500,
             "disableOnInteraction": false
             }'
         >
             <swiper-slide class="hero__slide hero__one">
                 <div class="container">
-                    <div class="hero__one__info hero-info animate__animated animate__zoomInDown animate__slow">
+                    <div class="hero__one__info hero-info animate__animated animate__zoomInDown">
                         <h1 class="cormorant-500">
-                            <span>бренд</span>
+                            <span>{{$t('brand')}}</span>
                             american vintage
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page animate__animated animate__bounce animate__delay-2s">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page animate__animated animate__bounce animate__delay-2s">{{$t('See-collection')}}</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -27,10 +27,10 @@
                 <div class="container">
                     <div class="hero__two__info hero-info">
                         <h1>
-                            <span>бренд</span>
+                            <span>{{$t('brand')}}</span>
                             george gina <br>lucy
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">{{$t('See-collection')}}</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -38,10 +38,10 @@
                 <div class="container">
                     <div class="hero__three__info hero-info">
                         <h1>
-                            <span>бренд</span>
+                            <span>{{$t('brand')}}</span>
                             DEHA
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">{{$t('See-collection')}}</router-link>
                     </div>
                 </div>
             </swiper-slide>
@@ -49,41 +49,34 @@
                 <div class="container">
                     <div class="hero__four__info hero-info">
                         <h1>
-                            <span>бренд</span>
+                            <span>{{$t('brand')}}</span>
                             birkenstock
                         </h1>
-                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">Смотреть коллекцию</router-link>
+                        <router-link :to="{ name: 'products' }" class="nav-text-font links-page">{{$t('See-collection')}}</router-link>
                     </div>
                 </div>
             </swiper-slide>
-            <!-- <ul class="active-section">
-                <li class="active">01</li>
-                <li>02</li>
-                <li>03</li>
-                <li>04</li>
-            </ul> -->
         </swiper>
         <main>
             <section class="bg-collection">
                 <div class="collection">
                     <div class="container">
                         <div class="collection__info" data-aos="zoom-in" data-aos-duration="500">
-                            <h1>new arrival</h1>
-                            <p class="description-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem
-                                ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip</p>
-                            <router-link :to="{name: 'products'}" class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">Смотреть коллекцию</router-link>
+                            <h1>{{$t('new-arrival')}}</h1>
+                            <p class="description-text">{{$t("text1")}}</p>
+                            <router-link :to="{name: 'products'}" class="nav-text-font links-page animate__animated animate__bounce animate__infinite animate__slower animate__delay-5s" href="#">{{$t('See-collection')}}</router-link>
                         </div>
                         <div class="collection__img">
                             <img src="@/assets/images/collection-img.png" alt="" data-aos="zoom-in" data-aos-duration="500">
                             <p class="collection__img__abso collection__text">
-                                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip
+                                {{$t("text2")}}
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="famous">
-                <h1 class="famous__title">Популярное</h1>
+                <h1 class="famous__title">{{$t('Popular')}}</h1>
                 <div class="famous__container" data-aos="fade-up" data-aos-duration="1500">
                     <swiper 
                     class="famous__container__card" 
@@ -92,8 +85,8 @@
                     :slidesPerView="'auto'"
                     navigation
                     >
-                        <SwiperSlide class="famous__container__card-slide" v-for="item in 14" :key="item">
-                            <FamousItemComponent></FamousItemComponent>
+                        <SwiperSlide class="famous__container__card-slide" v-for="(item, i) in store.products" :key="i">
+                            <FamousItemComponent :item="item"></FamousItemComponent>
                         </SwiperSlide>
                     </swiper>
                 </div>
@@ -140,6 +133,9 @@ import { ref, onMounted } from 'vue';
 import FamousItemComponent from '../components/FamousItemComponent.vue';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import {useCounterStore } from '@/stores/Counter.js';
+const store = useCounterStore()
+store.getProducts()
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

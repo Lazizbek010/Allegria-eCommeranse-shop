@@ -186,7 +186,7 @@
                 justify-content: space-between;
                 border-bottom: 1px solid var(--light-color1);
                 li{
-                    padding: 0 20px;
+                    padding: 0 10px;
                     padding-bottom: 10px;
                     text-transform: uppercase;
                     color: var( --silver-color);
@@ -201,11 +201,16 @@
                 padding: 15px 0 16px;
                 border-bottom: 1px solid var( --light-color1);
                 position: relative;
-
-                svg{
+                cursor: pointer;
+                button{
                     position: absolute;
                     right: 0;
                     top: 31px;
+                    background: transparent;
+                    padding: 5px;
+                }
+                svg{
+                    pointer-events: none;
                 }
                 ul{
                     margin-top: 15px;   
