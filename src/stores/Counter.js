@@ -37,9 +37,9 @@ export const useCounterStore = defineStore('counter', () => {
     localStorage.setItem(WISHLIST_KEY, JSON.stringify(wishlist.value))
   }
   async function getProducts(){
-    const res = await fetch('https://mocki.io/v1/c6ecd411-fa8d-4dbc-ab65-bf1d97d628c8');
+    const res = await fetch('https://mocki.io/v1/09d5a176-7600-40df-8eb7-37065f6d1aac');
     const data = await res.json();
-    products.value = data.products;
+    products.value = data;
   }
   
   return {allProducts, cart, wishlist, cartPr, products, addToCart, getProducts, removeProductFromCart, removeProductFromWishlits };

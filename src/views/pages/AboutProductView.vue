@@ -174,25 +174,25 @@ import { ref, onMounted, computed } from "vue";
 import { useCounterStore } from "@/stores/Counter.js";
 import { useRoute } from "vue-router";
 const store = useCounterStore();
-// const route = useRoute();
+const route = useRoute();
 const openPaymentModal = ref(false);
 const openReturnModal = ref(false);
 const like = ref(false);
-// const id = Number(route.params.id);
-const { id } = defineProps(['id'])
+const id = Number(route.params.id);
+// const { id } = defineProps(['id'])
 const index = ref(0);
-const pr = ref({})
-// const pr = computed(() => {
-//     let item = store.products.find((el) => el.id === Number(route.params.id));
-//     return item;
-// });
+// const pr = ref({})
+const pr = computed(() => {
+    let item = store.products.find((el) => el.id === Number(route.params.id));
+    return item;
+});
 
-async function getPr(){
-    const res = await fetch('http://localhost:3000/products/'+id);
-    const data = await res.json();
-    pr.value = data
-}
-getPr()
+// async function getPr(){
+//     const res = await fetch('https://mocki.io/v1/ec76150c-d682-488f-be33-0374f0cb5834/'+id);
+//     const data = await res.json();
+//     pr.value = data
+// }
+// getPr()
 function changeImg(i) {
     index.value = i
 }
