@@ -37,10 +37,9 @@ export const useCounterStore = defineStore('counter', () => {
     localStorage.setItem(WISHLIST_KEY, JSON.stringify(wishlist.value))
   }
   async function getProducts(){
-    // const res = await fetch('https://my-json-server.typicode.com/Lazizbek010/data');
-    const res = await fetch('http://localhost:3000/products');
+    const res = await fetch('https://mocki.io/v1/c6ecd411-fa8d-4dbc-ab65-bf1d97d628c8');
     const data = await res.json();
-    products.value = data
+    products.value = data.products;
   }
   
   return {allProducts, cart, wishlist, cartPr, products, addToCart, getProducts, removeProductFromCart, removeProductFromWishlits };

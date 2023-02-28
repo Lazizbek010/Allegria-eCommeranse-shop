@@ -144,18 +144,18 @@
             <ul class="gender">
                 <li v-for="male in store.allProducts" :key="male" class="description-text active">{{male.title}}</li>
             </ul>
-            <h3 class="products__menu__item" v-for="(products, i) in store.allProducts.man.products" :key="i">
+            <h3 @click="products.open = !products.open" class="products__menu__item" :class="{'open': products.open}" v-for="(products, i) in store.allProducts.man.products" :key="i">
                 <span>{{products.title}}</span>
-                <button @click="hiddenList = !hiddenList">
-                    <svg  v-if="!hiddenList" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
+                <button @click="isopen = !isopen">
+                    <svg  v-if="!isopen" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none">
                     <path stroke="#000" d="M5 0v10M0 5h10" />
-                </svg>
-                <svg @click="hiddenList = false" v-else xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none">
-                    <path stroke="#E64926" d="M0 1h10" />
-                </svg>
+                    </svg>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none">
+                        <path stroke="#E64926" d="M0 1h10" />
+                    </svg>
                 </button>
                 <ul>
-                    <li v-show="hiddenList" v-for="(item, i) in products.variants" :key="i" class="select-font">{{item.title}}</li>
+                    <li v-show="products.open" v-for="(item, i) in products.variants" :key="i" class="select-font">{{item.title}}</li>
                 </ul>
             </h3>
         </div>
@@ -178,6 +178,12 @@ function closeFiltrModal() {
     sortModalEvent.value = false;
 }
 
+const accordion = ref([]);
+
+accordion.value.forEach(element => {
+   return element 
+});
+
 onMounted(() => {
     AOS.init();
 });
@@ -191,5 +197,11 @@ function yana(){
     if(store.products.length > page.value * 6)
     page.value++;
 }
+
+const isopen = computed(()=>{
+    store.allProducts.man.products.forEach((p)=>{
+        p.open = false
+    })
+})
 </script>
 

@@ -5,6 +5,7 @@ const allProducts = ref({
       products: [
         {
           title: 'Одежда',
+          open: false,
           variants: [
             {
               title: 'Футболки',
@@ -179,6 +180,7 @@ const allProducts = ref({
         },
         {
           title: 'Обувь',
+          open: false,
           variants: [
             {
               title: 'Туфли',
@@ -329,6 +331,7 @@ const allProducts = ref({
         },
         {
           title: 'Аксессуары',
+          open: false,
           variants: [
             {
               title: 'Очки',
@@ -440,6 +443,7 @@ const allProducts = ref({
         },
         {
           title: 'Сумки',
+          open: false,
           variants: [
             {
               title: 'Мужские сумки',
